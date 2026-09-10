@@ -114,3 +114,46 @@ export interface FaqItem {
   answer: string;
   category: 'pedidos' | 'calidad' | 'entregas' | 'pagos';
 }
+
+export type UserRole = 'admin' | 'customer';
+
+export interface UserProfile {
+  uid: string;
+  email: string;
+  displayName: string;
+  role: UserRole;
+  phone?: string;
+  address?: string;
+  city?: string;
+  createdAt: string;
+}
+
+export type OrderStatus = 'pendiente' | 'confirmado' | 'cosechando' | 'en_camino' | 'entregado' | 'cancelado';
+
+export interface FirestoreOrderItem {
+  name: string;
+  quantityText: string;
+  price: number;
+}
+
+export interface FirestoreOrder {
+  id: string;
+  orderNumber: string;
+  userId?: string;
+  customerName: string;
+  customerEmail: string;
+  customerPhone: string;
+  shippingAddress: string;
+  shippingCity: string;
+  deliveryDate?: string;
+  deliveryTimeSlot?: string;
+  notes?: string;
+  packaging?: string;
+  items: FirestoreOrderItem[];
+  total: number;
+  subtotal: number;
+  deliveryFee: number;
+  paymentMethod: string;
+  status: OrderStatus;
+  createdAt: string;
+}
