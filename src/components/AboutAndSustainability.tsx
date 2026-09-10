@@ -15,7 +15,7 @@ export const AboutAndSustainability: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-stone-100 border-4 border-stone-50">
               <img
                 src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80"
-                alt="Finca de arándanos y frutas de alta montaña en Colombia"
+                alt="Finca de arándanos de alta montaña en Colombia"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
@@ -28,7 +28,7 @@ export const AboutAndSustainability: React.FC = () => {
                   Cordillera Oriental · Sabana de Cundinamarca
                 </h3>
                 <p className="text-xs text-stone-300">
-                  Más de 2.450 m.s.n.m. de tierra volcánica fértil y aguas puras de páramo
+                  Más de 2.480 m.s.n.m. de tierra volcánica fértil y aguas puras de páramo
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export const AboutAndSustainability: React.FC = () => {
             </h2>
 
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              <strong className="text-stone-900">Fresh Pick Frutas</strong> nació de una profunda vocación familiar por la agricultura regenerativa en Colombia. Nos propusimos demostrar que es posible cultivar los arándanos y frutos rojos más dulces y crocantes sin agredir el ecosistema.
+              <strong className="text-stone-900">Fresh Pick</strong> nació de una profunda vocación familiar por la agricultura regenerativa en Colombia. Nos propusimos demostrar que es posible cultivar los arándanos más dulces y crocantes sin agredir el ecosistema.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -85,7 +85,7 @@ export const AboutAndSustainability: React.FC = () => {
             </div>
 
             <p className="text-xs text-stone-500 italic">
-              "No alteramos los tiempos de la naturaleza; respetamos el ciclo de cada floración para que en tu mesa disfrutes fruta viva y pura."
+              "No alteramos los tiempos de la naturaleza; respetamos el ciclo de cada floración para que en tu mesa disfrutes arándanos vivos y puros."
             </p>
 
           </div>

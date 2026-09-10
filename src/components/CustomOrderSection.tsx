@@ -49,8 +49,6 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
         initial[f.id] = 500;
       } else if (f.id === 'arandanos-premium') {
         initial[f.id] = 500;
-      } else if (f.id === 'fresas-albion') {
-        initial[f.id] = 250;
       } else {
         initial[f.id] = 0;
       }
@@ -142,7 +140,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
   const validateForm = (): boolean => {
     const errors: Record<string, string> = {};
     if (totalGrams === 0) {
-      errors.fruits = 'Por favor selecciona al menos una variedad de fruta con gramaje.';
+      errors.fruits = 'Por favor selecciona al menos una variedad o formato de arándanos con gramaje.';
     }
     if (!customerName.trim()) {
       errors.customerName = 'Ingresa tu nombre completo.';
@@ -229,14 +227,14 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
           }).join('%0A')
         : '';
 
-      const msg = `*NUEVO PEDIDO PERSONALIZADO - FRESH PICK FRUTAS*%0A%0A` +
+      const msg = `*NUEVO PEDIDO PERSONALIZADO - FRESH PICK ARÁNDANOS*%0A%0A` +
         `*Orden:* ${orderId}%0A` +
         `*Cliente:* ${customerName}%0A` +
         `*Teléfono:* ${customerPhone}%0A` +
         `*Ciudad / Dirección:* ${deliveryCity}, ${deliveryAddress}%0A` +
         `*Fecha de Entrega:* ${deliveryDate} (${deliveryTimeSlot === 'morning' ? 'Mañana 8am-1pm' : 'Tarde 1pm-6pm'})%0A` +
         `*Frecuencia:* ${frequency === 'weekly' ? 'Semanal' : frequency === 'biweekly' ? 'Quincenal' : 'Única vez'}%0A%0A` +
-        `*Frutas Seleccionadas:*%0A${fruitsSummary}${addonSummary}%0A%0A` +
+        `*Arándanos Seleccionados:*%0A${fruitsSummary}${addonSummary}%0A%0A` +
         `*Empaque:* ${selectedPackaging.name}%0A` +
         `*Maduración deseada:* ${ripeness === 'ready_now' ? 'Listo para comer ya' : ripeness === 'firm_for_week' ? 'Firme para toda la semana' : 'Maduración alta para batidos'}%0A` +
         (isGift && giftMessage ? `*Dedicatoria Regalo:* "${giftMessage}" (Para: ${recipientName})%0A` : '') +
@@ -272,13 +270,13 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 animate-spin-slow" />
-            <span>Exclusivo Fresh Pick Frutas</span>
+            <span>Exclusivo Fresh Pick Arándanos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight font-display">
-            Arma tu Pedido Personalizado en Línea
+            Arma tu Pedido de Arándanos en Línea
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            Elige los gramos exactos de cada fruta, la presentación artesanal o ecológica, el punto de maduración ideal y dedicatoria personalizada si es para regalar.
+            Elige los gramos exactos de arándanos, la presentación artesanal o ecológica, el punto de maduración ideal y dedicatoria personalizada si es para regalar.
           </p>
         </div>
 
@@ -318,7 +316,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
 
               <div className="space-y-1.5 py-1">
                 <span className="font-bold text-stone-900 block text-xs uppercase tracking-wider text-blue-800">
-                  Frutas en tu caja ({totalGrams}g totales):
+                  Arándanos en tu caja ({totalGrams}g totales):
                 </span>
                 {completedOrder.fruits.map(item => {
                   const fruit = fruits.find(f => f.id === item.fruitId);
@@ -349,7 +347,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
             {/* Actions for completed order */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href={`https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas!%20Acabo%20de%20hacer%20el%20pedido%20personalizado%20%23${completedOrder.id}%20a%20nombre%20de%20${encodeURIComponent(completedOrder.customerName)}.%20Quisiera%20confirmarlo.`}
+                href={`https://wa.me/573216920138?text=Hola%20Fresh%20Pick!%20Acabo%20de%20hacer%20el%20pedido%20personalizado%20%23${completedOrder.id}%20a%20nombre%20de%20${encodeURIComponent(completedOrder.customerName)}.%20Quisiera%20confirmarlo.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 transition-all flex items-center justify-center gap-2 shadow-sm"
@@ -398,15 +396,15 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                     </span>
                     <div>
                       <h3 className="text-lg font-bold text-stone-900 font-display">
-                        Elige tus Frutas y Gramajes
+                        Elige tus Formatos de Arándanos y Gramajes
                       </h3>
                       <p className="text-xs text-stone-500">
-                        Selecciona la cantidad en gramos de cada fruto recién cosechado.
+                        Selecciona la cantidad en gramos de cada selección de arándanos recién cosechados.
                       </p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <span className="text-[11px] text-stone-500 font-medium block">Peso total de fruta</span>
+                    <span className="text-[11px] text-stone-500 font-medium block">Peso total de arándanos</span>
                     <span className="text-sm font-black text-blue-800 font-display">
                       {(totalGrams / 1000).toFixed(2)} kg <span className="text-xs font-normal text-stone-500">({totalGrams}g)</span>
                     </span>
@@ -450,7 +448,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                               </p>
                               {currentGrams > 0 && (
                                 <span className="text-xs font-bold text-blue-800">
-                                  Subtotal fruta: ${fruitCost.toLocaleString('es-CO')} COP
+                                  Subtotal arándanos: ${fruitCost.toLocaleString('es-CO')} COP
                                 </span>
                               )}
                             </div>
@@ -725,7 +723,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                           rows={2}
                           value={giftMessage}
                           onChange={(e) => setGiftMessage(e.target.value)}
-                          placeholder="¡Feliz cumpleaños! Disfruta estas frutas frescas recién cosechadas para ti..."
+                          placeholder="¡Feliz cumpleaños! Disfruta estos arándanos frescos recién cosechados para ti..."
                           className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 bg-white focus:outline-blue-600"
                         />
                       </div>
@@ -958,7 +956,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                   {/* Weight Capacity bar */}
                   <div>
                     <div className="flex justify-between items-center text-xs font-medium text-stone-600 mb-1">
-                      <span>Fruta agregada:</span>
+                      <span>Arándanos agregados:</span>
                       <span className="font-bold text-blue-900">
                         {totalGrams}g ({((totalGrams / 1000)).toFixed(2)} kg)
                       </span>
@@ -972,7 +970,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                     {totalGrams === 0 && (
                       <p className="text-[11px] text-amber-700 mt-1 flex items-center gap-1">
                         <AlertCircle className="w-3 h-3" />
-                        <span>Aún no has sumado frutas a tu orden.</span>
+                        <span>Aún no has sumado arándanos a tu orden.</span>
                       </p>
                     )}
                   </div>

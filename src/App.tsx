@@ -78,7 +78,7 @@ export default function App() {
 
   const handleSelectSubscriptionPlan = (plan: SubscriptionPlan) => {
     // Open WhatsApp with prefilled message or scroll to custom order
-    const message = `Hola Fresh Pick Frutas! Deseo suscribirme al *${plan.title}* (${plan.weight} por $${plan.priceMonth.toLocaleString('es-CO')} COP/mes). Por favor indíquenme cómo activar mi suscripción.`;
+    const message = `Hola Fresh Pick! Deseo suscribirme al *${plan.title}* (${plan.weight} por $${plan.priceMonth.toLocaleString('es-CO')} COP/mes). Por favor indíquenme cómo activar mi suscripción de arándanos.`;
     window.open(`https://wa.me/573216920138?text=${encodeURIComponent(message)}`, '_blank');
   };
 

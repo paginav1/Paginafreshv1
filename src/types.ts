@@ -3,7 +3,7 @@ export interface FruitItem {
   name: string;
   scientificName: string;
   variety: string;
-  category: 'berries' | 'exoticas' | 'packs';
+  category: 'frescos' | 'jumbo' | 'familiar' | 'congelados' | string;
   tagline: string;
   description: string;
   pricePerGram: number; // in COP per gram, e.g., 28 COP/g (28.000 COP / kg)

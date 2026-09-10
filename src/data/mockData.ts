@@ -3,11 +3,11 @@ import { FruitItem, PackagingOption, AddOnItem, SubscriptionPlan, RecipeItem, Te
 export const FRUITS_DATA: FruitItem[] = [
   {
     id: 'arandanos-premium',
-    name: 'Arándanos Biloxi & Emerald',
+    name: 'Arándanos Biloxi & Emerald (250g)',
     scientificName: 'Vaccinium corymbosum',
     variety: 'Biloxi / Emerald Alta Montaña',
-    category: 'berries',
-    tagline: 'Crocantes, dulces y de calibre extra grande',
+    category: 'frescos',
+    tagline: 'Crocantes, dulces y con pruina natural intacta',
     description: 'Nuestra fruta insignia. Cultivados a más de 2.450 m.s.n.m. bajo sol andino y neblina matutina, lo que potencia su concentración de antioxidantes y produce una pruina natural perfecta.',
     pricePerGram: 28, // 28 COP / g -> $7.000 COP los 250g
     defaultGramUnit: 250,
@@ -22,102 +22,63 @@ export const FRUITS_DATA: FruitItem[] = [
     popular: true,
   },
   {
-    id: 'moras-castilla',
-    name: 'Mora de Castilla Silvestre',
-    scientificName: 'Rubus glaucus',
-    variety: 'Castilla Seleccionada sin Espinas',
-    category: 'berries',
-    tagline: 'Sabor andino intenso con balance cítrico insuperable',
-    description: 'Cosechada cuidadosamente a mano en su punto exacto de maduración. Fruto carnoso, jugoso, ideal para jugos vivos, repostería gourmet y mermeladas artesanales.',
-    pricePerGram: 18, // $4.500 COP los 250g
-    defaultGramUnit: 250,
-    standardPrice: 4500,
-    presentation: 'Canastilla protectora 250g',
-    imageUrl: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=800&q=80',
-    brix: '11° - 13° Brix',
-    altitude: '2.350 m.s.n.m.',
-    benefits: ['Alta fuente de Vitamina C', 'Potente antiinflamatorio natural', 'Excelente para la salud cardiovascular'],
-    shelfLife: '7 - 9 días en refrigeración',
-    inStock: true,
-    popular: true,
-  },
-  {
-    id: 'frambuesas-heritage',
-    name: 'Frambuesas Heritage Rubí',
-    scientificName: 'Rubus idaeus',
-    variety: 'Heritage Andina',
-    category: 'berries',
-    tagline: 'Aroma delicado, textura aterciopelada y color rubí brillante',
-    description: 'Fruta exquisita y frágil protegida con empaques acolchados especiales. Cada bocado estalla en boca con notas perfumadas y una acidez refinada.',
-    pricePerGram: 36, // $9.000 COP los 250g
-    defaultGramUnit: 250,
-    standardPrice: 9000,
-    presentation: 'Clamshell microperforado 250g',
-    imageUrl: 'https://images.unsplash.com/photo-1577069808021-5f25a72013f9?auto=format&fit=crop&w=800&q=80',
-    brix: '12° - 14° Brix',
-    altitude: '2.520 m.s.n.m.',
-    benefits: ['Ricas en fibra dietaria soluble', 'Ácido elágico protector celular', 'Favorece el control glucémico'],
-    shelfLife: '5 - 7 días en refrigeración',
-    inStock: true,
-  },
-  {
-    id: 'fresas-albion',
-    name: 'Fresas Albión Dulce Corazón',
-    scientificName: 'Fragaria × ananassa',
-    variety: 'Albión Hidropónica Protegida',
-    category: 'berries',
-    tagline: 'Rojas de punta a tallo, firmes y aromáticas',
-    description: 'Cultivadas en sistemas elevados sostenibles con recirculación de agua pura de manantial de montaña. Cero contacto con suelo, garantizando higiene impecable.',
-    pricePerGram: 16, // $4.000 COP los 250g
-    defaultGramUnit: 250,
-    standardPrice: 4000,
-    presentation: 'Caja Kraft respirable 250g',
-    imageUrl: 'https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=800&q=80',
-    brix: '10.5° - 12° Brix',
-    altitude: '2.400 m.s.n.m.',
-    benefits: ['90% agua e hidratación', 'Aporte clave de ácido fólico', 'Antioxidantes flavonoides'],
-    shelfLife: '8 - 10 días en refrigeración',
-    inStock: true,
-    popular: true,
-  },
-  {
-    id: 'uchuvas-doradas',
-    name: 'Uchuvas Andinas Doradas',
-    scientificName: 'Physalis peruviana',
-    variety: 'Ecotipo Colombia Dorada',
-    category: 'exoticas',
-    tagline: 'La superfruta dorada con capacho protector natural',
-    description: 'Tesoros de los Andes colombianos. Con un perfil agridulce adictivo, son famosas a nivel mundial por sus propiedades purificadoras y su aporte de carotenoides.',
-    pricePerGram: 20, // $5.000 COP los 250g
-    defaultGramUnit: 250,
-    standardPrice: 5000,
-    presentation: 'Bandeja con capacho deshidratado 250g',
-    imageUrl: 'https://images.unsplash.com/photo-1546852199-2d8e8c4aaada?auto=format&fit=crop&w=800&q=80',
-    brix: '13° - 15° Brix',
-    altitude: '2.600 m.s.n.m.',
-    benefits: ['Gran fuente de Provitamina A', 'Fortalece la visión y defensas', 'Diurético y depurativo'],
-    shelfLife: '20 - 25 días en ambiente fresco',
-    inStock: true,
-  },
-  {
-    id: 'mix-antioxidante',
-    name: 'Mix Silvestre Antioxidante',
-    scientificName: 'Blend Especial Fresh Pick',
-    variety: 'Arándano + Mora + Frambuesa + Fresa',
-    category: 'packs',
-    tagline: 'El cuenco perfecto para tus mañanas y batidos energéticos',
-    description: 'Selección premium con proporciones equilibradas de nuestros 4 frutos rojos estelares cosechados en el mismo amanecer.',
-    pricePerGram: 26, // $6.500 COP los 250g ($13.000 los 500g)
+    id: 'arandanos-jumbo-gourmet',
+    name: 'Arándanos Jumbo Selección Especial (500g)',
+    scientificName: 'Vaccinium corymbosum (Jumbo)',
+    variety: 'Selección Calibre >18mm',
+    category: 'jumbo',
+    tagline: 'Bayas gigantes seleccionadas a mano, máxima dulzura y crocancia',
+    description: 'Frutos de calibre gigante escogidos a mano durante la cosecha. Sorprenden por su gran tamaño, estallido de jugo en boca y alto grado de concentración de azúcares naturales.',
+    pricePerGram: 30, // $15.000 COP los 500g
     defaultGramUnit: 500,
-    standardPrice: 13000,
-    presentation: 'Eco-pack compartimentado 500g',
-    imageUrl: 'https://images.unsplash.com/photo-1506459225024-1428097a7e18?auto=format&fit=crop&w=800&q=80',
-    brix: '13.5° Promedio',
-    altitude: '2.450 m.s.n.m.',
-    benefits: ['Máxima sinergia de fitoquímicos', 'Ideal para desayunos fit', 'Listos para consumir'],
-    shelfLife: '7 - 10 días en refrigeración',
+    standardPrice: 15000,
+    presentation: 'Eco-estuche rígido 500g',
+    imageUrl: 'https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?auto=format&fit=crop&w=800&q=80',
+    brix: '15.5° - 17° Brix',
+    altitude: '2.520 m.s.n.m.',
+    benefits: ['Calibre extra superior >18mm', 'Mayor textura y firmeza', 'Selección manual de máxima categoría'],
+    shelfLife: '14 - 18 días en refrigeración',
     inStock: true,
     popular: true,
+  },
+  {
+    id: 'arandanos-familiares-1kg',
+    name: 'Caja Familiar Ahorro de Arándanos (1.000g)',
+    scientificName: 'Vaccinium corymbosum (Grado Exportación)',
+    variety: 'Biloxi & Emerald Grado 1',
+    category: 'familiar',
+    tagline: '1 Kilo de arándanos frescos recién cosechados al mejor precio',
+    description: 'La opción más conveniente y rendidora para hogares, amantes de los smoothies y el consumo diario. 1.000 gramos de arándanos frescos de primera calidad directamente del campo.',
+    pricePerGram: 25, // $25.000 COP el kilo (1000g)
+    defaultGramUnit: 1000,
+    standardPrice: 25000,
+    presentation: 'Caja Kraft respirable 1.000g',
+    imageUrl: 'https://images.unsplash.com/photo-1563746098251-d35aef196e83?auto=format&fit=crop&w=800&q=80',
+    brix: '14.5° - 16° Brix',
+    altitude: '2.450 m.s.n.m.',
+    benefits: ['Formato ahorro familiar', 'Cosechado en el amanecer del despacho', 'Ideal para consumo de toda la semana'],
+    shelfLife: '14 - 18 días en refrigeración',
+    inStock: true,
+    popular: true,
+  },
+  {
+    id: 'arandanos-congelados-iqf',
+    name: 'Arándanos Congelados IQF Grado A (500g)',
+    scientificName: 'Vaccinium corymbosum (IQF)',
+    variety: 'Congelación Rápida Individual',
+    category: 'congelados',
+    tagline: 'Enteros y sueltos para batidos, repostería y larga conservación',
+    description: 'Arándanos seleccionados congelados individualmente (IQF) horas después de su cosecha. No forman bloques de hielo y conservan el 100% de sabor, vitaminas y antioxidantes.',
+    pricePerGram: 22, // $11.000 COP los 500g
+    defaultGramUnit: 500,
+    standardPrice: 11000,
+    presentation: 'Bolsa hermética con cierre fácil 500g',
+    imageUrl: 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=800&q=80',
+    brix: '14° - 15° Brix',
+    altitude: '2.480 m.s.n.m.',
+    benefits: ['Ultracongelados sin perder nutrientes', 'Granos 100% sueltos sin apelmazar', 'Durabilidad de hasta 12 meses en congelador'],
+    shelfLife: '12 meses en congelador (-18°C)',
+    inStock: true,
   }
 ];
 
@@ -195,7 +156,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
     deliveryFrequency: 'Entregas semanales o quincenales a tu elección',
     idealFor: '1 - 2 personas',
     features: [
-      'Arándanos Biloxi seleccionados + Fruta de rotación estacional',
+      'Arándanos Biloxi seleccionados de cosecha fresca semanal',
       'Despacho en 24h tras la recolección matutina',
       '10% de descuento incluido respecto al precio por gramo',
       'Pausa o cancela tu suscripción en cualquier momento',
@@ -212,7 +173,7 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
     isPopular: true,
     idealFor: '3 - 5 personas',
     features: [
-      'Variedad libre: arándanos, moras, frambuesas y fresas',
+      'Arándanos frescos de alta montaña calibre superior',
       'Envío a domicilio 100% gratuito todas las semanas',
       '18% de ahorro sobre precio regular',
       '1 Frasco de Miel Cruda de la Finca gratis cada mes',
@@ -269,7 +230,7 @@ export const CERTIFICATIONS_LIST = [
 export const RECIPES_DATA: RecipeItem[] = [
   {
     id: 'smoothie-bowl-antioxidante',
-    title: 'Bowl Andino de Arándanos & Semillas',
+    title: 'Bowl Andino de Arándanos & Granola',
     prepTime: '10 min',
     difficulty: 'Fácil',
     image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80',
@@ -279,53 +240,52 @@ export const RECIPES_DATA: RecipeItem[] = [
       '1 banano maduro congelado',
       '1/2 taza de leche de almendras o yogurt griego natural',
       '1 cda de miel cruda de la finca',
-      'Topping: Granola andina, semillas de chía y frambuesas frescas'
+      'Topping: Granola andina, semillas de chía y arándanos frescos enteros'
     ],
     instructions: [
       'Licuar los arándanos con el banano y la leche vegetal a velocidad alta hasta lograr textura espesa.',
       'Servir de inmediato en un cuenco hondo.',
-      'Decorar con frambuesas frescas, un hilo de miel y la granola artesanal.'
+      'Decorar con arándanos frescos crocantes, un hilo de miel y la granola artesanal.'
     ]
   },
   {
     id: 'torta-rustica-berries',
-    title: 'Tarta Rústica de Frambuesas & Moras',
+    title: 'Galette Rústica de Arándanos Andinos',
     prepTime: '35 min',
     difficulty: 'Intermedio',
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
-    description: 'Una galette rústica dorada que resalta los jugos naturales y el brillo de nuestras bayas recién recolectadas.',
+    description: 'Una galette rústica dorada que resalta los jugos naturales y el brillo de nuestros arándanos recién recolectados.',
     ingredients: [
-      '200g de Moras de Castilla',
-      '150g de Frambuesas Heritage Fresh Pick',
+      '350g de Arándanos Frescos Fresh Pick',
       '1 lámina de masa quebrada artesanal',
       '2 cucharadas de panela pulverizada o azúcar morena orgánica',
-      'Ralladura de 1 limón verde'
+      'Ralladura de 1 limón verde y canela al gusto'
     ],
     instructions: [
       'Extender la masa sobre papel vegetal en una bandeja de horno.',
-      'Mezclar con suavidad los frutos con la ralladura y la panela.',
-      'Colocar las bayas en el centro y doblar los bordes rústicamente hacia adentro.',
+      'Mezclar con suavidad los arándanos con la ralladura y la panela.',
+      'Colocar los arándanos en el centro y doblar los bordes rústicamente hacia adentro.',
       'Hornear a 190°C por 25 minutos hasta dorar la corteza. Servir tibia.'
     ]
   },
   {
     id: 'infusion-tonica-berries',
-    title: 'Agua Refrescante de Uchuvas & Fresas',
+    title: 'Limonada Helada de Arándanos & Menta',
     prepTime: '5 min',
     difficulty: 'Muy fácil',
     image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
-    description: 'Bebida de hidratación alcalina con rodajas de fruta fresca, menta de huerta y hielo picado.',
+    description: 'Bebida de hidratación alcalina con arándanos frescos macerados, menta de huerta y hielo picado.',
     ingredients: [
-      '1 taza de uchuvas cortadas a la mitad',
-      '1 taza de fresas Albión en rodajas finas',
+      '1 taza de arándanos frescos Fresh Pick',
+      'Jugo de 2 limones frescos',
       'Hojas de menta o hierbabuena fresca',
       '1 litro de agua con o sin gas',
       'Hielo al gusto'
     ],
     instructions: [
-      'Macerar ligeramente las uchuvas y la menta en el fondo de una jarra de vidrio.',
-      'Añadir las rodajas de fresa fresca y el hielo abundante.',
-      'Completar con agua fría y dejar reposar 10 minutos antes de disfrutar.'
+      'Macerar ligeramente los arándanos y la menta en el fondo de una jarra de vidrio para soltar su jugo azulado.',
+      'Añadir el jugo de limón recién exprimido y el hielo abundante.',
+      'Completar con agua fría y dejar reposar 5 minutos antes de disfrutar.'
     ]
   }
 ];
@@ -338,7 +298,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     city: 'Bogotá, Colombia',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
     rating: 5,
-    comment: 'Trabajar con Fresh Pick Frutas cambió el estándar de nuestras tartaletas. El calibre de los arándanos es gigante y nunca vienen húmedos ni golpeados. El pedido personalizado nos permite pedir la fruta en su punto exacto.',
+    comment: 'Trabajar con Fresh Pick cambió el estándar de nuestras tartaletas. El calibre de los arándanos es gigante y nunca vienen húmedos ni golpeados. El pedido personalizado nos permite pedir la fruta en su punto exacto.',
     verifiedOrder: 'Pedido Personalizado recurrente (4 kg/semana)'
   },
   {
@@ -348,7 +308,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     city: 'Medellín, Colombia',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
     rating: 5,
-    comment: 'Compro el Plan Familiar de Frutos Rojos. Se nota la diferencia de la altitud: son mucho más dulces y la cáscara cruje al morder. Mis hijos ahora comen arándanos y uchuvas en vez de golosinas procesadas.',
+    comment: 'Compro la Caja Familiar de Arándanos semanalmente. Se nota la diferencia de la altitud: son mucho más dulces y la cáscara cruje al morder. Mis hijos ahora comen arándanos frescos en vez de golosinas procesadas.',
     verifiedOrder: 'Suscripción Plan Familiar Vitalidad'
   },
   {
@@ -367,20 +327,20 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     category: 'pedidos',
-    question: '¿Cómo funciona la sección de pedidos personalizados en línea?',
-    answer: 'En nuestra sección de pedidos personalizados puedes elegir exactamente los gramos de cada fruta (arándanos, moras, frambuesas, fresas o uchuvas), el tipo de empaque (desde cajas kraft eco hasta canastas de regalo), el nivel de maduración deseado, notas especiales o dedicatorias, y la fecha de entrega. Al finalizar puedes confirmar directamente en línea o enviarnos el resumen por WhatsApp con un solo clic.'
+    question: '¿Cómo funciona la sección de pedidos personalizados de arándanos?',
+    answer: 'En nuestra sección de pedidos personalizados puedes elegir exactamente la cantidad y formato de arándanos (clamshells 250g, selección jumbo 500g o cajas familiares de 1.000g), el tipo de empaque (desde cajas kraft eco hasta canastas de regalo), el nivel de maduración deseado, notas especiales o dedicatorias, y la fecha de entrega. Al finalizar puedes confirmar directamente en línea o enviarnos el resumen por WhatsApp con un solo clic.'
   },
   {
     id: 'faq-2',
     category: 'calidad',
-    question: '¿Por qué las frutas de Fresh Pick tienen mejor sabor y firmeza?',
-    answer: 'Nuestros cultivos se encuentran situados a 2.450 metros sobre el nivel del mar en la cordillera andina. La amplitud térmica entre el día y la noche genera una acumulación superior de azúcares naturales (Brix entre 14° y 16°) y una consistencia crocante insuperable. Además, practicamos polinización 100% natural con abejas nativas y no usamos ceras artificiales.'
+    question: '¿Por qué los arándanos de Fresh Pick tienen mejor sabor y firmeza?',
+    answer: 'Nuestros cultivos se encuentran situados a 2.480 metros sobre el nivel del mar en la cordillera andina. La amplitud térmica entre el día y la noche genera una acumulación superior de azúcares naturales (Brix entre 14.5° y 17°) y una consistencia crocante insuperable. Además, practicamos polinización 100% natural con abejas nativas y no usamos ceras artificiales.'
   },
   {
     id: 'faq-3',
     category: 'entregas',
     question: '¿Cuánto tardan en entregar y cómo garantizan la cadena de frío?',
-    answer: 'Recolectamos la fruta a primera hora del amanecer y la despachamos en vehículos acondicionados el mismo día o a la mañana siguiente (en menos de 24 horas tras la cosecha). Para envíos locales en Bogotá, Sabana, Chía, Cajicá, Cota y municipios aledaños la entrega se realiza el mismo día programado. También contamos con envíos exprés a principales ciudades.'
+    answer: 'Recolectamos los arándanos a primera hora del amanecer y los despachamos en vehículos acondicionados el mismo día o a la mañana siguiente (en menos de 24 horas tras la cosecha). Para envíos locales en Bogotá, Sabana, Chía, Cajicá, Cota y municipios aledaños la entrega se realiza el mismo día programado. También contamos con envíos exprés a principales ciudades.'
   },
   {
     id: 'faq-4',
@@ -397,7 +357,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-6',
     category: 'calidad',
-    question: '¿Qué certificados respaldan la inocuidad y responsabilidad de sus frutas?',
+    question: '¿Qué certificados respaldan la inocuidad y responsabilidad de sus arándanos?',
     answer: 'Contamos con la certificación internacional GLOBALG.A.P. (norma mundial para buenas prácticas e inocuidad agrícola) y la acreditación social GRASP (GLOBALG.A.P. Risk Assessment on Social Practice), que certifica el bienestar, salud y condiciones laborales dignas de nuestros recolectadores y trabajadores. También contamos con registro BPA otorgado por el ICA.'
   }
 ];

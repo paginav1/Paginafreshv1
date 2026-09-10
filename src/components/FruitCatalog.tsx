@@ -13,7 +13,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
   onAddToCart,
   onCustomizeWithFruit
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'berries' | 'exoticas' | 'packs'>('all');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'frescos' | 'jumbo' | 'familiar' | 'congelados'>('all');
   const [activeModalFruit, setActiveModalFruit] = useState<FruitItem | null>(null);
   const [addedIds, setAddedIds] = useState<Record<string, boolean>>({});
 
@@ -37,13 +37,13 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-3">
-            <span>Nuestras Variedades de Cosecha</span>
+            <span>Nuestra Cosecha de Arándanos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-display">
-            Frutas de Altura con Dulzor y Textura Extraordinarios
+            Arándanos de Altura con Dulzor y Textura Extraordinarios
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            Cada fruto es cuidado desde la floración con abejas polinizadoras nativas y cosechado a mano una a una para preservar su pruina natural intacta.
+            Cultivados en la alta montaña andina con polinización natural de abejas nativas y cosechados a mano baya por baya para preservar su pruina natural intacta.
           </p>
 
           {/* Category Filter Pills */}
@@ -56,37 +56,47 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
-              Todas las Variedades ({fruits.length})
+              Todos los Arándanos ({fruits.length})
             </button>
             <button
-              onClick={() => setSelectedCategory('berries')}
+              onClick={() => setSelectedCategory('frescos')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                selectedCategory === 'berries'
+                selectedCategory === 'frescos'
                   ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
-              Berries & Arándanos
+              Frescos 250g
             </button>
             <button
-              onClick={() => setSelectedCategory('exoticas')}
+              onClick={() => setSelectedCategory('jumbo')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                selectedCategory === 'exoticas'
+                selectedCategory === 'jumbo'
                   ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
-              Exóticas Andinas (Uchuva)
+              Selección Jumbo
             </button>
             <button
-              onClick={() => setSelectedCategory('packs')}
+              onClick={() => setSelectedCategory('familiar')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                selectedCategory === 'packs'
+                selectedCategory === 'familiar'
                   ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
-              Blends & Mixes
+              Caja Familiar 1kg
+            </button>
+            <button
+              onClick={() => setSelectedCategory('congelados')}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                selectedCategory === 'congelados'
+                  ? 'bg-blue-800 text-white shadow-sm'
+                  : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
+              }`}
+            >
+              Congelados IQF
             </button>
           </div>
         </div>

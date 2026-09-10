@@ -26,12 +26,12 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-[1.12] font-display">
-              Frutas frescas con la <span className="text-blue-700 underline decoration-blue-300 decoration-wavy decoration-2">intensidad y el carácter</span> que nacen en la alta montaña.
+              Arándanos frescos con la <span className="text-blue-700 underline decoration-blue-300 decoration-wavy decoration-2">intensidad y el carácter</span> que nacen en la alta montaña.
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-stone-600 max-w-2xl leading-relaxed">
-              En <strong className="text-stone-900 font-semibold">Fresh Pick Frutas</strong> cultivamos arándanos, moras, frambuesas y frutos rojos a más de 2.450 m.s.n.m. con polinización 100% natural, cero ceras artificiales y cosecha manual selectiva.
+              En <strong className="text-stone-900 font-semibold">Fresh Pick</strong> cultivamos exclusivamente arándanos de alta montaña a más de 2.480 m.s.n.m. con polinización 100% natural, cero ceras artificiales y cosecha manual selectiva.
             </p>
 
             {/* CTAs */}
@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
                 className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-700 text-white font-bold text-base hover:bg-blue-800 active:scale-[0.98] transition-all shadow-md shadow-blue-800/20 hover:shadow-lg hover:shadow-blue-800/30 cursor-pointer"
               >
                 <Sparkles className="w-5 h-5 text-blue-200 group-hover:rotate-12 transition-transform" />
-                <span>Haz tu Pedido Personalizado en Línea</span>
+                <span>Haz tu Pedido de Arándanos en Línea</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
                 onClick={onExploreFruits}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-stone-300 text-stone-700 font-semibold text-base hover:bg-stone-50 hover:text-blue-800 hover:border-blue-300 active:scale-[0.98] transition-all cursor-pointer shadow-xs"
               >
-                <span>Explorar Frutas y Variedades</span>
+                <span>Explorar Cosecha de Arándanos</span>
               </button>
             </div>
 
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
               <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/20 border-4 border-white aspect-[4/3] sm:aspect-[5/4] relative">
                 <img
                   src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=1200&q=85"
-                  alt="Arándanos frescos de Fresh Pick Frutas recién cosechados"
+                  alt="Arándanos frescos de Fresh Pick recién cosechados"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                   loading="eager"
                 />

@@ -22,7 +22,7 @@ export const FloatingWhatsApp: React.FC = () => {
       </div>
       
       <a
-        href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas!%20Quisiera%20asesor%C3%ADa%20para%20un%20pedido%20de%20frutas%20frescas."
+        href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick!%20Quisiera%20asesor%C3%ADa%20para%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos."
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center shadow-2xl shadow-blue-950/40 hover:scale-110 active:scale-95 transition-all duration-300"

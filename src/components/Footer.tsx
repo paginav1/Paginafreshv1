@@ -25,23 +25,23 @@ export const Footer: React.FC = () => {
                   <span className="text-2xl font-black tracking-tight text-white font-display">
                     Fresh Pick
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-950/80 text-purple-200 border border-purple-800/60">
-                    Frutas
+                  <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-950/80 text-blue-200 border border-blue-800/60">
+                    Arándanos
                   </span>
                 </div>
                 <p className="text-[11px] text-stone-400">
-                  Arándanos & Frutas de Alta Montaña
+                  Arándanos de Alta Montaña
                 </p>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-stone-400 leading-relaxed max-w-sm">
-              Inspirados en la agricultura responsable andina. Cosechamos a mano arándanos, moras, frambuesas y frutos rojos con polinización natural y respeto por la biodiversidad.
+              Inspirados en la agricultura responsable andina. Cosechamos a mano arándanos de alta montaña con polinización natural, calibre superior y respeto por la biodiversidad.
             </p>
 
             <div className="pt-2 flex items-center gap-3">
               <a
-                href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas"
+                href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-blue-400 hover:bg-blue-700 hover:text-white transition-colors"
@@ -73,32 +73,27 @@ export const Footer: React.FC = () => {
           {/* Navigation Links */}
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Explorar
+              Cosecha de Arándanos
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#variedades" className="hover:text-blue-400 transition-colors">
-                  Arándanos Biloxi & Emerald
+                  Biloxi & Emerald 250g
                 </a>
               </li>
               <li>
                 <a href="#variedades" className="hover:text-blue-400 transition-colors">
-                  Moras de Castilla
+                  Arándanos Jumbo (+18mm)
                 </a>
               </li>
               <li>
                 <a href="#variedades" className="hover:text-blue-400 transition-colors">
-                  Frambuesas Rubí
+                  Caja Familiar Ahorro 1kg
                 </a>
               </li>
               <li>
                 <a href="#variedades" className="hover:text-blue-400 transition-colors">
-                  Uchuvas Doradas
-                </a>
-              </li>
-              <li>
-                <a href="#variedades" className="hover:text-blue-400 transition-colors">
-                  Mix Antioxidante
+                  Arándanos Congelados IQF
                 </a>
               </li>
             </ul>
@@ -183,7 +178,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Strip: Payments & Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
-          <p>© {new Date().getFullYear()} Fresh Pick Frutas. Todos los derechos reservados. Inspirado en morao.org.</p>
+          <p>© {new Date().getFullYear()} Fresh Pick - Arándanos de Alta Montaña. Todos los derechos reservados.</p>
           
           <div className="flex items-center gap-2 text-[11px]">
             <span>Medios de pago:</span>

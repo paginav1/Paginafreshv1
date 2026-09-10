@@ -24,7 +24,7 @@ export const TestimonialsAndFaq: React.FC = () => {
               La Calidad Fresh Pick Habla por Sí Sola
             </h2>
             <p className="mt-3 text-base sm:text-lg text-stone-600">
-              Chefs de alta repostería, deportistas de élite y familias que priorizan la nutrición limpia eligen nuestras frutas de altura.
+              Chefs de alta repostería, deportistas de élite y familias que priorizan la nutrición limpia eligen nuestros arándanos de altura.
             </p>
           </div>
 

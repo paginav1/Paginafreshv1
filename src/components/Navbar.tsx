@@ -49,12 +49,12 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-2 truncate">
             <span className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
             <span className="font-medium">Cosecha matutina de hoy:</span>
-            <span className="hidden sm:inline text-blue-200">Arándanos Biloxi y Moras silvestres listas para despacho</span>
+            <span className="hidden sm:inline text-blue-200">Arándanos Biloxi y Emerald frescos listos para despacho en 24h</span>
           </div>
           <div className="flex items-center gap-4 text-xs shrink-0">
             <span className="hidden md:inline text-blue-200">🌱 100% Polinización Natural</span>
             <a
-              href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas,%20quiero%20hacer%20un%20pedido%20de%20frutas%20frescas"
+              href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white flex items-center gap-1 font-semibold text-blue-300 hover:underline"
@@ -94,12 +94,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="text-xl sm:text-2xl font-black tracking-tight text-[#1e1634] font-display">
                   Fresh Pick
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-100 text-purple-900 border border-purple-200/60">
-                  Frutas
+                <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-100 text-blue-900 border border-blue-200/60">
+                  Arándanos
                 </span>
               </div>
               <p className="text-[10px] text-stone-500 font-medium tracking-wide">
-                Arándanos & Frutas de Alta Montaña
+                Arándanos de Alta Montaña
               </p>
             </div>
           </button>
@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => scrollToSection('variedades')}
               className="hover:text-blue-700 transition-colors cursor-pointer"
             >
-              Nuestras Frutas
+              Nuestros Arándanos
             </button>
             <button
               onClick={() => scrollToSection('planes-mensuales')}
@@ -197,7 +197,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => scrollToSection('variedades')}
               className="block w-full text-left py-2.5 px-3 rounded-lg text-stone-800 font-medium hover:bg-blue-50 hover:text-blue-800"
             >
-              Nuestras Frutas y Variedades
+              Nuestros Arándanos
             </button>
             <button
               onClick={() => { setMobileMenuOpen(false); onNavigateToCustomOrder(); }}
@@ -205,7 +205,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             >
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-blue-700" />
-                <span>Armar Pedido Personalizado</span>
+                <span>Armar Pedido de Arándanos</span>
               </div>
               <span className="bg-blue-700 text-white text-[10px] uppercase px-2 py-0.5 rounded-full">Exclusivo</span>
             </button>
@@ -242,7 +242,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div className="pt-2 border-t border-stone-100 flex flex-col gap-2">
               <a
-                href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas,%20quiero%20hacer%20un%20pedido%20de%20frutas%20frescas"
+                href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-center py-2.5 rounded-lg bg-blue-600 text-white font-semibold flex items-center justify-center gap-2"

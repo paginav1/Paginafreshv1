@@ -17,10 +17,10 @@ export const RecipesAndTips: React.FC = () => {
             <span>Inspiración Culinaria & Consejos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-display">
-            Recetas Saludables con Fresh Pick Frutas
+            Recetas Saludables con Arándanos Fresh Pick
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            Descubre formas deliciosas de integrar arándanos, moras y frambuesas frescas en tus desayunos, meriendas y postres gourmet.
+            Descubre formas deliciosas de integrar arándanos frescos y congelados en tus desayunos, meriendas saludables y postres gourmet.
           </p>
         </div>
 

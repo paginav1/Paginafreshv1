@@ -33,12 +33,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
   const handleWhatsAppCheckout = () => {
     const list = items.map(item => `• ${item.fruit.name} (${item.fruit.presentation}) x${item.quantity}: $${(item.fruit.standardPrice * item.quantity).toLocaleString('es-CO')} COP`).join('%0A');
-    const msg = `*PEDIDO DIRECTO - FRESH PICK FRUTAS*%0A%0A` +
+    const msg = `*PEDIDO DIRECTO - FRESH PICK ARÁNDANOS*%0A%0A` +
       `*Productos:*%0A${list}%0A%0A` +
       `*Subtotal:* $${subtotal.toLocaleString('es-CO')} COP%0A` +
       `*Envío:* ${isFreeDelivery ? 'GRATIS' : '$7.000 COP'}%0A` +
       `*TOTAL:* $${total.toLocaleString('es-CO')} COP%0A%0A` +
-      `Hola! Deseo confirmar este pedido de frutas frescas para despacho a domicilio.`;
+      `Hola! Deseo confirmar este pedido de arándanos frescos para despacho a domicilio.`;
     
     window.open(`https://wa.me/573216920138?text=${msg}`, '_blank');
   };
@@ -78,7 +78,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <div>
                 <h4 className="font-bold text-stone-800 text-base">Tu canasta está vacía</h4>
                 <p className="text-stone-500 text-xs mt-1 max-w-xs">
-                  Añade arándanos o variedades de fruta fresca desde nuestro catálogo o arma tu caja personalizada.
+                  Añade arándanos frescos desde nuestro catálogo o arma tu caja personalizada.
                 </p>
               </div>
 
@@ -87,7 +87,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-700 text-white text-xs font-bold hover:bg-blue-800 transition-colors"
               >
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Armar Pedido Personalizado</span>
+                <span>Armar Pedido de Arándanos</span>
               </button>
             </div>
           ) : (

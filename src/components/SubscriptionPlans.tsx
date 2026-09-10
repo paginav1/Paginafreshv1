@@ -22,10 +22,10 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
             <span>Suscripciones & Entregas Programadas</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-display">
-            Planes Mensuales de Fruta Fresca a tu Puerta
+            Planes Mensuales de Arándanos Frescos a tu Puerta
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            Asegura el suministro semanal de arándanos y frutos rojos recién cosechados para tu familia o negocio con hasta 25% de ahorro y envíos preferenciales.
+            Asegura el suministro semanal de arándanos recién cosechados para tu familia o negocio con hasta 25% de ahorro y envíos preferenciales.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
           </div>
 
           <a
-            href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas,%20tengo%20un%20negocio/restaurante%20y%20me%20gustar%C3%ADa%20conocer%20la%20lista%20de%20precios%20institucionales%20al%20por%20mayor."
+            href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20tengo%20un%20negocio/restaurante%20y%20me%20gustar%C3%ADa%20conocer%20la%20lista%20de%20precios%20institucionales%20de%20ar%C3%A1ndanos%20al%20por%20mayor."
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-5 py-3 rounded-xl bg-stone-900 text-white text-xs sm:text-sm font-bold hover:bg-stone-800 transition-colors"
