@@ -54,13 +54,13 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center gap-4 text-xs shrink-0">
             <span className="hidden md:inline text-emerald-200">🌱 100% Polinización Natural</span>
             <a
-              href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
+              href="https://wa.me/573178931026?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white flex items-center gap-1 font-semibold text-emerald-300 hover:underline"
             >
               <Phone className="w-3 h-3" />
-              <span>WhatsApp: +57 321 692 0138</span>
+              <span>WhatsApp: +57 317 893 1026</span>
             </a>
           </div>
         </div>
@@ -238,7 +238,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div className="pt-2 border-t border-stone-100 flex flex-col gap-2">
               <a
-                href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
+                href="https://wa.me/573178931026?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-center py-2.5 rounded-lg bg-[#1B4D3E] text-white font-semibold flex items-center justify-center gap-2"
