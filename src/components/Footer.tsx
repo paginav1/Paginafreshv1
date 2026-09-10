@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
 
             <div className="pt-2 flex items-center gap-3">
               <a
-                href="https://wa.me/573216920138?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos"
+                href="https://wa.me/573178931026?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-blue-400 hover:bg-blue-700 hover:text-white transition-colors"
@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-white font-medium">Línea & WhatsApp:</span>
-                  <span>+57 321 692 0138</span>
+                  <span>+57 317 893 1026</span>
                 </div>
               </div>
 
