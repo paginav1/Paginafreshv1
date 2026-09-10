@@ -17,7 +17,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-3">
             <CalendarCheck className="w-3.5 h-3.5" />
             <span>Suscripciones & Entregas Programadas</span>
           </div>
@@ -37,13 +37,13 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
                 key={plan.id}
                 className={`relative rounded-3xl p-6 sm:p-8 transition-all flex flex-col justify-between ${
                   plan.isPopular
-                    ? 'bg-emerald-950 text-white shadow-2xl shadow-emerald-950/20 ring-2 ring-emerald-500 scale-105 z-10'
+                    ? 'bg-blue-950 text-white shadow-2xl shadow-blue-950/20 ring-2 ring-blue-500 scale-105 z-10'
                     : 'bg-white text-stone-900 border border-stone-200/90 shadow-sm hover:shadow-lg'
                 }`}
               >
                 {/* Popular Ribbon */}
                 {plan.isPopular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-lime-500 text-stone-950 text-xs font-extrabold uppercase tracking-wider shadow-md flex items-center gap-1.5">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-blue-600 to-sky-400 text-white text-xs font-extrabold uppercase tracking-wider shadow-md flex items-center gap-1.5">
                     <Sparkles className="w-3 h-3" />
                     <span>El Más Elegido por Familias</span>
                   </div>
@@ -52,7 +52,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
                 <div>
                   {/* Title & subtitle */}
                   <div className="mb-4">
-                    <span className={`text-xs font-bold uppercase tracking-wider ${plan.isPopular ? 'text-emerald-300' : 'text-emerald-700'}`}>
+                    <span className={`text-xs font-bold uppercase tracking-wider ${plan.isPopular ? 'text-blue-300' : 'text-blue-700'}`}>
                       {plan.idealFor}
                     </span>
                     <h3 className="text-2xl font-bold font-display mt-1">{plan.title}</h3>
@@ -63,7 +63,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
 
                   {/* Weight tag */}
                   <div className={`py-2 px-3 rounded-xl text-xs font-semibold mb-6 ${
-                    plan.isPopular ? 'bg-emerald-900/80 text-emerald-200 border border-emerald-800' : 'bg-stone-50 text-stone-700 border border-stone-100'
+                    plan.isPopular ? 'bg-blue-900/80 text-blue-200 border border-blue-800' : 'bg-stone-50 text-stone-700 border border-stone-100'
                   }`}>
                     📦 {plan.weight}
                   </div>
@@ -78,7 +78,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
                         COP / mes
                       </span>
                     </div>
-                    <p className={`text-[11px] mt-1 ${plan.isPopular ? 'text-emerald-300' : 'text-stone-500'}`}>
+                    <p className={`text-[11px] mt-1 ${plan.isPopular ? 'text-blue-300' : 'text-stone-500'}`}>
                       {plan.deliveryFrequency}
                     </p>
                   </div>
@@ -88,7 +88,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-2.5">
                         <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                          plan.isPopular ? 'bg-emerald-800 text-emerald-300' : 'bg-emerald-100 text-emerald-700'
+                          plan.isPopular ? 'bg-blue-800 text-blue-300' : 'bg-blue-100 text-blue-700'
                         }`}>
                           <Check className="w-2.5 h-2.5" />
                         </div>
@@ -106,8 +106,8 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
                     onClick={() => onSelectPlan(plan)}
                     className={`w-full py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
                       plan.isPopular
-                        ? 'bg-emerald-500 text-stone-950 hover:bg-emerald-400 shadow-md active:scale-98'
-                        : 'bg-emerald-800 text-white hover:bg-emerald-900 active:scale-98 shadow-xs'
+                        ? 'bg-blue-500 text-white hover:bg-blue-400 shadow-md active:scale-98'
+                        : 'bg-blue-800 text-white hover:bg-blue-900 active:scale-98 shadow-xs'
                     }`}
                   >
                     Suscribirme al {plan.title}
@@ -125,7 +125,7 @@ export const SubscriptionPlans: React.FC<SubscriptionPlansProps> = ({
         {/* Corporate & Wholesale Strip */}
         <div className="mt-12 bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center shrink-0">
               <HeartHandshake className="w-6 h-6" />
             </div>
             <div>

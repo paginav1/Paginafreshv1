@@ -265,12 +265,12 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
   };
 
   return (
-    <section id="pedidos-personalizados" className="py-16 sm:py-24 bg-gradient-to-b from-[#fbfdf9] via-emerald-50/20 to-stone-50 border-y border-emerald-950/5">
+    <section id="pedidos-personalizados" className="py-16 sm:py-24 bg-gradient-to-b from-[#f8fafc] via-blue-50/20 to-stone-50 border-y border-blue-950/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Banner */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600 text-white text-xs font-bold uppercase tracking-wider mb-3 shadow-sm">
             <Sparkles className="w-3.5 h-3.5 animate-spin-slow" />
             <span>Exclusivo Fresh Pick Frutas</span>
           </div>
@@ -284,12 +284,12 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
 
         {/* If Order is already completed, show celebratory receipt */}
         {completedOrder ? (
-          <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl border border-emerald-200 p-6 sm:p-10 text-center animate-in zoom-in-95 duration-300">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-4">
+          <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl border border-blue-200 p-6 sm:p-10 text-center animate-in zoom-in-95 duration-300">
+            <div className="w-16 h-16 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center mx-auto mb-4">
               <CheckCircle2 className="w-10 h-10" />
             </div>
 
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">
+            <span className="text-xs font-bold uppercase tracking-widest text-blue-700">
               ¡Pedido Generado con Éxito!
             </span>
             <h3 className="text-2xl sm:text-3xl font-black text-stone-900 font-display mt-1">
@@ -304,7 +304,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               <div className="flex justify-between items-center pb-3 border-b border-stone-200">
                 <span className="text-stone-500">Fecha programada:</span>
                 <span className="font-bold text-stone-900 flex items-center gap-1">
-                  <Calendar className="w-4 h-4 text-emerald-600" />
+                  <Calendar className="w-4 h-4 text-blue-600" />
                   {completedOrder.deliveryDate} ({completedOrder.deliveryTimeSlot === 'morning' ? 'Mañana' : 'Tarde'})
                 </span>
               </div>
@@ -317,7 +317,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               </div>
 
               <div className="space-y-1.5 py-1">
-                <span className="font-bold text-stone-900 block text-xs uppercase tracking-wider text-emerald-800">
+                <span className="font-bold text-stone-900 block text-xs uppercase tracking-wider text-blue-800">
                   Frutas en tu caja ({totalGrams}g totales):
                 </span>
                 {completedOrder.fruits.map(item => {
@@ -340,7 +340,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
 
               <div className="pt-3 border-t border-stone-200 flex justify-between items-baseline">
                 <span className="font-bold text-stone-900">Total a pagar:</span>
-                <span className="text-xl font-black text-emerald-800 font-display">
+                <span className="text-xl font-black text-blue-800 font-display">
                   ${completedOrder.total.toLocaleString('es-CO')} COP
                 </span>
               </div>
@@ -352,7 +352,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                 href={`https://wa.me/573216920138?text=Hola%20Fresh%20Pick%20Frutas!%20Acabo%20de%20hacer%20el%20pedido%20personalizado%20%23${completedOrder.id}%20a%20nombre%20de%20${encodeURIComponent(completedOrder.customerName)}.%20Quisiera%20confirmarlo.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm hover:bg-emerald-700 transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm hover:bg-blue-700 transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Confirmar por WhatsApp</span>
@@ -393,7 +393,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm p-5 sm:p-7 space-y-5">
                 <div className="flex items-center justify-between pb-3 border-b border-stone-100">
                   <div className="flex items-center gap-2.5">
-                    <span className="w-7 h-7 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center font-display">
+                    <span className="w-7 h-7 rounded-full bg-blue-800 text-white text-xs font-black flex items-center justify-center font-display">
                       1
                     </span>
                     <div>
@@ -407,7 +407,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                   </div>
                   <div className="text-right">
                     <span className="text-[11px] text-stone-500 font-medium block">Peso total de fruta</span>
-                    <span className="text-sm font-black text-emerald-800 font-display">
+                    <span className="text-sm font-black text-blue-800 font-display">
                       {(totalGrams / 1000).toFixed(2)} kg <span className="text-xs font-normal text-stone-500">({totalGrams}g)</span>
                     </span>
                   </div>
@@ -423,7 +423,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         key={fruit.id}
                         className={`p-3.5 sm:p-4 rounded-xl border transition-all ${
                           currentGrams > 0
-                            ? 'bg-emerald-50/40 border-emerald-300 shadow-xs'
+                            ? 'bg-blue-50/40 border-blue-300 shadow-xs'
                             : 'bg-stone-50/60 border-stone-200/80 hover:border-stone-300'
                         }`}
                       >
@@ -449,7 +449,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                                 ${fruit.pricePerGram} COP/g · ${(fruit.pricePerGram * 250).toLocaleString('es-CO')} por 250g
                               </p>
                               {currentGrams > 0 && (
-                                <span className="text-xs font-bold text-emerald-800">
+                                <span className="text-xs font-bold text-blue-800">
                                   Subtotal fruta: ${fruitCost.toLocaleString('es-CO')} COP
                                 </span>
                               )}
@@ -467,7 +467,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                                   onClick={() => handleSetExactGrams(fruit.id, grams)}
                                   className={`px-2 py-1 rounded text-[11px] font-semibold transition-colors cursor-pointer ${
                                     currentGrams === grams
-                                      ? 'bg-emerald-700 text-white'
+                                      ? 'bg-blue-700 text-white'
                                       : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
                                   }`}
                                 >
@@ -513,7 +513,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               {/* STEP 2: Packaging & Presentation */}
               <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm p-5 sm:p-7 space-y-4">
                 <div className="flex items-center gap-2.5 pb-3 border-b border-stone-100">
-                  <span className="w-7 h-7 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center font-display">
+                  <span className="w-7 h-7 rounded-full bg-blue-800 text-white text-xs font-black flex items-center justify-center font-display">
                     2
                   </span>
                   <div>
@@ -536,17 +536,17 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => setSelectedPackagingId(pack.id)}
                         className={`p-4 rounded-xl border-2 transition-all cursor-pointer flex flex-col justify-between ${
                           isSelected
-                            ? 'border-emerald-600 bg-emerald-50/50 shadow-xs'
+                            ? 'border-blue-600 bg-blue-50/50 shadow-xs'
                             : 'border-stone-200 bg-white hover:border-stone-300'
                         }`}
                       >
                         <div>
                           <div className="flex items-center justify-between gap-2 mb-1.5">
                             <div className="flex items-center gap-2">
-                              <Package className={`w-4 h-4 ${isSelected ? 'text-emerald-700' : 'text-stone-500'}`} />
+                              <Package className={`w-4 h-4 ${isSelected ? 'text-blue-700' : 'text-stone-500'}`} />
                               <h4 className="text-sm font-bold text-stone-900">{pack.name}</h4>
                             </div>
-                            {isSelected && <BadgeCheck className="w-5 h-5 text-emerald-600" />}
+                            {isSelected && <BadgeCheck className="w-5 h-5 text-blue-600" />}
                           </div>
 
                           <p className="text-xs text-stone-600 leading-relaxed">
@@ -558,7 +558,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                           <span className="text-[11px] text-stone-500 italic">
                             {pack.bestFor}
                           </span>
-                          <span className="font-bold text-emerald-900">
+                          <span className="font-bold text-blue-900">
                             {pack.extraPrice === 0 ? 'Incluido' : `+$${pack.extraPrice.toLocaleString('es-CO')}`}
                           </span>
                         </div>
@@ -571,7 +571,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               {/* STEP 3: Add-Ons & Extras from the Farm */}
               <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm p-5 sm:p-7 space-y-4">
                 <div className="flex items-center gap-2.5 pb-3 border-b border-stone-100">
-                  <span className="w-7 h-7 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center font-display">
+                  <span className="w-7 h-7 rounded-full bg-blue-800 text-white text-xs font-black flex items-center justify-center font-display">
                     3
                   </span>
                   <div>
@@ -594,7 +594,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => toggleAddOn(addon.id)}
                         className={`p-3 rounded-xl border-2 transition-all cursor-pointer flex flex-col justify-between ${
                           isSelected
-                            ? 'border-emerald-600 bg-emerald-50/50 shadow-xs'
+                            ? 'border-blue-600 bg-blue-50/50 shadow-xs'
                             : 'border-stone-200 bg-white hover:border-stone-300'
                         }`}
                       >
@@ -616,11 +616,11 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         </div>
 
                         <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
-                          <span className="text-xs font-black text-emerald-800 font-display">
+                          <span className="text-xs font-black text-blue-800 font-display">
                             ${addon.price.toLocaleString('es-CO')}
                           </span>
                           <span className={`text-[11px] font-bold px-2 py-0.5 rounded ${
-                            isSelected ? 'bg-emerald-600 text-white' : 'bg-stone-100 text-stone-600'
+                            isSelected ? 'bg-blue-600 text-white' : 'bg-stone-100 text-stone-600'
                           }`}>
                             {isSelected ? '✓ Agregado' : '+ Añadir'}
                           </span>
@@ -634,7 +634,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               {/* STEP 4: Ripeness, Dedication & Special Instructions */}
               <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm p-5 sm:p-7 space-y-5">
                 <div className="flex items-center gap-2.5 pb-3 border-b border-stone-100">
-                  <span className="w-7 h-7 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center font-display">
+                  <span className="w-7 h-7 rounded-full bg-blue-800 text-white text-xs font-black flex items-center justify-center font-display">
                     4
                   </span>
                   <div>
@@ -676,7 +676,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => setRipeness(option.id as any)}
                         className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                           ripeness === option.id
-                            ? 'border-emerald-700 bg-emerald-50 text-emerald-950 font-semibold'
+                            ? 'border-blue-700 bg-blue-50 text-blue-950 font-semibold'
                             : 'border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100'
                         }`}
                       >
@@ -694,7 +694,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       type="checkbox"
                       checked={isGift}
                       onChange={(e) => setIsGift(e.target.checked)}
-                      className="w-4 h-4 text-emerald-600 rounded border-stone-300 focus:ring-emerald-500"
+                      className="w-4 h-4 text-blue-600 rounded border-stone-300 focus:ring-blue-500"
                     />
                     <span className="text-xs sm:text-sm font-bold text-amber-950 flex items-center gap-1.5">
                       <Gift className="w-4 h-4 text-amber-700" />
@@ -713,7 +713,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                           value={recipientName}
                           onChange={(e) => setRecipientName(e.target.value)}
                           placeholder="Ej. Mamá, Carlos Gómez, Laura..."
-                          className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 bg-white focus:outline-emerald-600"
+                          className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 bg-white focus:outline-blue-600"
                         />
                       </div>
 
@@ -726,7 +726,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                           value={giftMessage}
                           onChange={(e) => setGiftMessage(e.target.value)}
                           placeholder="¡Feliz cumpleaños! Disfruta estas frutas frescas recién cosechadas para ti..."
-                          className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 bg-white focus:outline-emerald-600"
+                          className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 bg-white focus:outline-blue-600"
                         />
                       </div>
                     </div>
@@ -743,7 +743,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                     value={specialNotes}
                     onChange={(e) => setSpecialNotes(e.target.value)}
                     placeholder="Ej. Dejar en portería torre 3, o prefiero los arándanos de calibre más grande posible..."
-                    className="w-full px-3 py-2 text-xs rounded-lg border border-stone-200 bg-stone-50 focus:bg-white focus:outline-emerald-600"
+                    className="w-full px-3 py-2 text-xs rounded-lg border border-stone-200 bg-stone-50 focus:bg-white focus:outline-blue-600"
                   />
                 </div>
 
@@ -752,7 +752,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               {/* STEP 5: Delivery & Customer Information */}
               <div className="bg-white rounded-2xl border border-stone-200/90 shadow-sm p-5 sm:p-7 space-y-4">
                 <div className="flex items-center gap-2.5 pb-3 border-b border-stone-100">
-                  <span className="w-7 h-7 rounded-full bg-emerald-800 text-white text-xs font-black flex items-center justify-center font-display">
+                  <span className="w-7 h-7 rounded-full bg-blue-800 text-white text-xs font-black flex items-center justify-center font-display">
                     5
                   </span>
                   <div>
@@ -782,12 +782,12 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => setFrequency(f.id as any)}
                         className={`p-2.5 rounded-xl border text-center transition-all cursor-pointer ${
                           frequency === f.id
-                            ? 'border-emerald-700 bg-emerald-50 text-emerald-950 font-bold'
+                            ? 'border-blue-700 bg-blue-50 text-blue-950 font-bold'
                             : 'border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100'
                         }`}
                       >
                         <div className="text-xs">{f.label}</div>
-                        <div className="text-[10px] text-emerald-700 font-semibold">{f.discount}</div>
+                        <div className="text-[10px] text-blue-700 font-semibold">{f.discount}</div>
                       </button>
                     ))}
                   </div>
@@ -803,7 +803,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
                       placeholder="Tu nombre y apellido"
-                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-emerald-600"
+                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-blue-600"
                     />
                   </div>
 
@@ -816,7 +816,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       value={customerPhone}
                       onChange={(e) => setCustomerPhone(e.target.value)}
                       placeholder="Ej. 321 692 0138"
-                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-emerald-600"
+                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-blue-600"
                     />
                   </div>
 
@@ -827,7 +827,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                     <select
                       value={deliveryCity}
                       onChange={(e) => setDeliveryCity(e.target.value)}
-                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-emerald-600 bg-white"
+                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-blue-600 bg-white"
                     >
                       <option value="Bogotá D.C.">Bogotá D.C. (Todas las zonas)</option>
                       <option value="Chía">Chía, Cundinamarca</option>
@@ -849,7 +849,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       value={deliveryAddress}
                       onChange={(e) => setDeliveryAddress(e.target.value)}
                       placeholder="Ej. Calle 127 # 15-30, Apto 502"
-                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-emerald-600"
+                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-blue-600"
                     />
                   </div>
 
@@ -862,7 +862,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       value={deliveryDate}
                       onChange={(e) => setDeliveryDate(e.target.value)}
                       min={new Date().toISOString().split('T')[0]}
-                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-emerald-600 bg-white"
+                      className="w-full px-3 py-2 text-xs rounded-lg border border-stone-300 focus:outline-blue-600 bg-white"
                     />
                   </div>
 
@@ -876,7 +876,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => setDeliveryTimeSlot('morning')}
                         className={`flex-1 py-2 text-xs rounded-lg border font-semibold ${
                           deliveryTimeSlot === 'morning'
-                            ? 'bg-emerald-700 text-white border-emerald-700'
+                            ? 'bg-blue-700 text-white border-blue-700'
                             : 'bg-stone-50 text-stone-600 border-stone-200'
                         }`}
                       >
@@ -887,7 +887,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => setDeliveryTimeSlot('afternoon')}
                         className={`flex-1 py-2 text-xs rounded-lg border font-semibold ${
                           deliveryTimeSlot === 'afternoon'
-                            ? 'bg-emerald-700 text-white border-emerald-700'
+                            ? 'bg-blue-700 text-white border-blue-700'
                             : 'bg-stone-50 text-stone-600 border-stone-200'
                         }`}
                       >
@@ -915,7 +915,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         onClick={() => setPaymentMethod(p.id as any)}
                         className={`p-2 rounded-lg border text-center text-xs transition-colors cursor-pointer ${
                           paymentMethod === p.id
-                            ? 'border-emerald-700 bg-emerald-50 text-emerald-950 font-bold'
+                            ? 'border-blue-700 bg-blue-50 text-blue-950 font-bold'
                             : 'border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100'
                         }`}
                       >
@@ -932,22 +932,22 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
             {/* Right Sticky Live Order Summary */}
             <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-4">
               
-              <div className="bg-white rounded-3xl border-2 border-emerald-800/20 shadow-xl overflow-hidden">
+              <div className="bg-white rounded-3xl border-2 border-blue-800/20 shadow-xl overflow-hidden">
                 
                 {/* Summary Header */}
-                <div className="bg-emerald-900 text-white p-5 sm:p-6">
+                <div className="bg-blue-900 text-white p-5 sm:p-6">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs uppercase tracking-wider text-emerald-300 font-bold">
+                    <span className="text-xs uppercase tracking-wider text-blue-300 font-bold">
                       Resumen del Pedido
                     </span>
-                    <span className="bg-emerald-800 text-emerald-100 text-[11px] font-semibold px-2 py-0.5 rounded-full">
+                    <span className="bg-blue-800 text-blue-100 text-[11px] font-semibold px-2 py-0.5 rounded-full">
                       Cosecha Viva
                     </span>
                   </div>
                   <h3 className="text-2xl font-black font-display mt-1">
                     Tu Caja Personalizada
                   </h3>
-                  <p className="text-xs text-emerald-200 mt-0.5">
+                  <p className="text-xs text-blue-200 mt-0.5">
                     Empaque: {selectedPackaging.name}
                   </p>
                 </div>
@@ -959,13 +959,13 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                   <div>
                     <div className="flex justify-between items-center text-xs font-medium text-stone-600 mb-1">
                       <span>Fruta agregada:</span>
-                      <span className="font-bold text-emerald-900">
+                      <span className="font-bold text-blue-900">
                         {totalGrams}g ({((totalGrams / 1000)).toFixed(2)} kg)
                       </span>
                     </div>
                     <div className="w-full h-2.5 rounded-full bg-stone-100 overflow-hidden">
                       <div
-                        className="h-full bg-emerald-600 transition-all duration-300 rounded-full"
+                        className="h-full bg-blue-600 transition-all duration-300 rounded-full"
                         style={{ width: `${Math.min(100, (totalGrams / 2000) * 100)}%` }}
                       />
                     </div>
@@ -987,7 +987,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       return (
                         <div key={fruit.id} className="flex justify-between items-center text-stone-700">
                           <div className="flex items-center gap-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
                             <span className="font-medium">{fruit.name}</span>
                             <span className="text-stone-400 text-xs">({grams}g)</span>
                           </div>
@@ -1031,7 +1031,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                     </div>
 
                     {discount > 0 && (
-                      <div className="flex justify-between text-emerald-700 font-medium">
+                      <div className="flex justify-between text-blue-700 font-medium">
                         <span>Descuento frecuencia ({frequency === 'weekly' ? '10%' : '5%'}):</span>
                         <span>-${discount.toLocaleString('es-CO')} COP</span>
                       </div>
@@ -1040,7 +1040,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                     <div className="flex justify-between items-center">
                       <span>Envío a domicilio:</span>
                       {isFreeDelivery ? (
-                        <span className="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded">
+                        <span className="text-blue-700 font-bold bg-blue-50 px-2 py-0.5 rounded">
                           ¡GRATIS!
                         </span>
                       ) : (
@@ -1065,7 +1065,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       </span>
                       <span className="text-[11px] text-stone-400">Impuestos y empaque incluidos</span>
                     </div>
-                    <span className="text-2xl sm:text-3xl font-black text-emerald-950 font-display">
+                    <span className="text-2xl sm:text-3xl font-black text-blue-950 font-display">
                       ${grandTotal.toLocaleString('es-CO')} <span className="text-xs font-normal text-stone-500">COP</span>
                     </span>
                   </div>
@@ -1078,7 +1078,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       type="button"
                       onClick={() => handleSubmitOrder(false)}
                       disabled={totalGrams === 0}
-                      className="w-full py-3.5 px-4 rounded-xl bg-emerald-800 text-white font-bold text-sm hover:bg-emerald-900 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-md shadow-emerald-900/15 cursor-pointer"
+                      className="w-full py-3.5 px-4 rounded-xl bg-blue-800 text-white font-bold text-sm hover:bg-blue-900 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-md shadow-blue-900/15 cursor-pointer"
                     >
                       <CheckCircle2 className="w-4 h-4" />
                       <span>Confirmar Pedido Personalizado</span>
@@ -1089,7 +1089,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                       type="button"
                       onClick={() => handleSubmitOrder(true)}
                       disabled={totalGrams === 0}
-                      className="w-full py-3 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs sm:text-sm hover:bg-emerald-700 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                      className="w-full py-3 px-4 rounded-xl bg-blue-600 text-white font-semibold text-xs sm:text-sm hover:bg-blue-700 active:scale-[0.98] transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer shadow-xs"
                     >
                       <Send className="w-4 h-4" />
                       <span>Pedir Directamente por WhatsApp</span>
@@ -1100,11 +1100,11 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                   {/* Trust guarantees */}
                   <div className="pt-3 border-t border-stone-100 flex items-center justify-center gap-4 text-[11px] text-stone-500">
                     <span className="flex items-center gap-1">
-                      <Truck className="w-3.5 h-3.5 text-emerald-700" />
+                      <Truck className="w-3.5 h-3.5 text-blue-700" />
                       Cosecha 24h
                     </span>
                     <span className="flex items-center gap-1">
-                      <RotateCcw className="w-3.5 h-3.5 text-emerald-700" />
+                      <RotateCcw className="w-3.5 h-3.5 text-blue-700" />
                       Garantía 100% frescura
                     </span>
                   </div>
@@ -1116,7 +1116,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               {/* Informative Helper Card */}
               <div className="p-4 rounded-2xl bg-stone-100/80 border border-stone-200 text-xs text-stone-600 space-y-2">
                 <div className="flex items-center gap-1.5 font-bold text-stone-800">
-                  <CreditCard className="w-4 h-4 text-emerald-700" />
+                  <CreditCard className="w-4 h-4 text-blue-700" />
                   <span>Métodos de Pago Transparentes</span>
                 </div>
                 <p>

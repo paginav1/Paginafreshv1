@@ -36,7 +36,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-3">
             <span>Nuestras Variedades de Cosecha</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-display">
@@ -52,7 +52,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 selectedCategory === 'all'
-                  ? 'bg-emerald-800 text-white shadow-sm'
+                  ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
@@ -62,7 +62,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
               onClick={() => setSelectedCategory('berries')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 selectedCategory === 'berries'
-                  ? 'bg-emerald-800 text-white shadow-sm'
+                  ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
@@ -72,7 +72,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
               onClick={() => setSelectedCategory('exoticas')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 selectedCategory === 'exoticas'
-                  ? 'bg-emerald-800 text-white shadow-sm'
+                  ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
@@ -82,7 +82,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
               onClick={() => setSelectedCategory('packs')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 selectedCategory === 'packs'
-                  ? 'bg-emerald-800 text-white shadow-sm'
+                  ? 'bg-blue-800 text-white shadow-sm'
                   : 'bg-white text-stone-600 border border-stone-200 hover:bg-stone-100'
               }`}
             >
@@ -114,7 +114,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                   {/* Top Badges */}
                   <div className="absolute top-3 left-3 flex items-center gap-1.5 flex-wrap">
                     {fruit.popular && (
-                      <span className="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-bold shadow-xs flex items-center gap-1">
+                      <span className="px-2.5 py-0.5 rounded-full bg-blue-600 text-white text-[11px] font-bold shadow-xs flex items-center gap-1">
                         <Sparkles className="w-3 h-3" />
                         <span>Más pedido</span>
                       </span>
@@ -132,7 +132,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
 
                   {/* Title on Image */}
                   <div className="absolute bottom-3 left-3 right-3 text-white">
-                    <p className="text-[11px] uppercase tracking-wider text-emerald-200 font-semibold">
+                    <p className="text-[11px] uppercase tracking-wider text-blue-200 font-semibold">
                       {fruit.variety}
                     </p>
                     <h3 className="text-xl font-bold font-display leading-tight drop-shadow-xs">
@@ -156,7 +156,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                       {fruit.benefits.slice(0, 2).map((benefit, i) => (
                         <span
                           key={i}
-                          className="text-[11px] bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-md border border-emerald-100/80 font-medium"
+                          className="text-[11px] bg-blue-50 text-blue-800 px-2 py-0.5 rounded-md border border-blue-100/80 font-medium"
                         >
                           ✓ {benefit}
                         </span>
@@ -171,7 +171,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                         Presentación: {fruit.presentation}
                       </span>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-lg font-black text-emerald-950 font-display">
+                        <span className="text-lg font-black text-blue-950 font-display">
                           ${fruit.standardPrice.toLocaleString('es-CO')}
                         </span>
                         <span className="text-xs text-stone-500 font-medium">COP</span>
@@ -194,8 +194,8 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                         onClick={() => handleAdd(fruit)}
                         className={`px-3.5 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
                           isAdded
-                            ? 'bg-emerald-600 text-white'
-                            : 'bg-emerald-800 text-white hover:bg-emerald-900 active:scale-95 shadow-xs'
+                            ? 'bg-blue-600 text-white'
+                            : 'bg-blue-800 text-white hover:bg-blue-900 active:scale-95 shadow-xs'
                         }`}
                       >
                         {isAdded ? (
@@ -214,11 +214,11 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                   </div>
 
                   {/* Quick Custom Builder link */}
-                  <div className="bg-emerald-50/70 p-2 rounded-lg border border-emerald-100 flex items-center justify-between text-xs">
-                    <span className="text-emerald-900 font-medium">¿La quieres en caja a medida?</span>
+                  <div className="bg-blue-50/70 p-2 rounded-lg border border-blue-100 flex items-center justify-between text-xs">
+                    <span className="text-blue-900 font-medium">¿La quieres en caja a medida?</span>
                     <button
                       onClick={() => onCustomizeWithFruit(fruit.id)}
-                      className="text-emerald-700 font-bold hover:text-emerald-900 hover:underline flex items-center gap-0.5 cursor-pointer"
+                      className="text-blue-700 font-bold hover:text-blue-900 hover:underline flex items-center gap-0.5 cursor-pointer"
                     >
                       <span>Personalizar</span>
                       <Sparkles className="w-3 h-3" />
@@ -256,7 +256,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
               </button>
 
               <div className="absolute bottom-3 left-4 right-4 text-white">
-                <span className="text-xs uppercase tracking-wider text-emerald-300 font-semibold">
+                <span className="text-xs uppercase tracking-wider text-blue-300 font-semibold">
                   Ficha Técnica Agronómica
                 </span>
                 <h3 className="text-2xl font-black font-display">{activeModalFruit.name}</h3>
@@ -282,7 +282,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
 
                 <div>
                   <div className="flex items-center justify-center gap-1 text-xs text-stone-500 font-medium">
-                    <Compass className="w-3.5 h-3.5 text-emerald-600" />
+                    <Compass className="w-3.5 h-3.5 text-blue-600" />
                     <span>Altitud</span>
                   </div>
                   <div className="text-sm font-bold text-stone-900 mt-1">{activeModalFruit.altitude}</div>
@@ -305,8 +305,8 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                 </h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                   {activeModalFruit.benefits.map((b, i) => (
-                    <li key={i} className="flex items-start gap-2 bg-emerald-50/50 p-2 rounded-md border border-emerald-100">
-                      <span className="text-emerald-700 font-bold">•</span>
+                    <li key={i} className="flex items-start gap-2 bg-blue-50/50 p-2 rounded-md border border-blue-100">
+                      <span className="text-blue-700 font-bold">•</span>
                       <span>{b}</span>
                     </li>
                   ))}
@@ -327,7 +327,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
             <div className="p-4 border-t border-stone-200 bg-stone-50 flex items-center justify-between gap-3">
               <div>
                 <span className="text-[11px] text-stone-500 block">Precio regular</span>
-                <span className="text-xl font-black text-emerald-950 font-display">
+                <span className="text-xl font-black text-blue-950 font-display">
                   ${activeModalFruit.standardPrice.toLocaleString('es-CO')} COP
                 </span>
               </div>
@@ -339,7 +339,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                     setActiveModalFruit(null);
                     onCustomizeWithFruit(id);
                   }}
-                  className="px-3.5 py-2.5 rounded-xl bg-white border border-emerald-300 text-emerald-800 text-xs font-bold hover:bg-emerald-50 transition-colors"
+                  className="px-3.5 py-2.5 rounded-xl bg-white border border-blue-300 text-blue-800 text-xs font-bold hover:bg-blue-50 transition-colors"
                 >
                   Personalizar Gramos
                 </button>
@@ -348,7 +348,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                     handleAdd(activeModalFruit);
                     setActiveModalFruit(null);
                   }}
-                  className="px-4 py-2.5 rounded-xl bg-emerald-800 text-white text-xs font-bold hover:bg-emerald-900 transition-colors shadow-xs"
+                  className="px-4 py-2.5 rounded-xl bg-blue-800 text-white text-xs font-bold hover:bg-blue-900 transition-colors shadow-xs"
                 >
                   Añadir al Carrito
                 </button>

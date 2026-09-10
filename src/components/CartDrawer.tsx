@@ -50,11 +50,11 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         {/* Drawer Header */}
         <div className="p-5 border-b border-stone-200 flex items-center justify-between bg-stone-50">
           <div className="flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-emerald-800" />
+            <ShoppingBag className="w-5 h-5 text-blue-800" />
             <h3 className="text-lg font-bold text-stone-900 font-display">
               Tu Carrito de Cosecha
             </h3>
-            <span className="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">
+            <span className="text-xs bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">
               {items.reduce((sum, i) => sum + i.quantity, 0)}
             </span>
           </div>
@@ -84,7 +84,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
               <button
                 onClick={() => { onClose(); onGoToCustomOrder(); }}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-700 text-white text-xs font-bold hover:bg-blue-800 transition-colors"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Armar Pedido Personalizado</span>
@@ -109,7 +109,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   <p className="text-[11px] text-stone-500">
                     {item.fruit.presentation} · ${item.fruit.standardPrice.toLocaleString('es-CO')}
                   </p>
-                  <p className="text-xs font-extrabold text-emerald-800 mt-0.5">
+                  <p className="text-xs font-extrabold text-blue-800 mt-0.5">
                     ${(item.fruit.standardPrice * item.quantity).toLocaleString('es-CO')} COP
                   </p>
                 </div>
@@ -161,7 +161,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               <div className="flex justify-between items-center">
                 <span>Envío:</span>
                 {isFreeDelivery ? (
-                  <span className="text-emerald-700 font-bold bg-emerald-100 px-2 py-0.2 rounded">¡Gratis!</span>
+                  <span className="text-blue-700 font-bold bg-blue-100 px-2 py-0.2 rounded">¡Gratis!</span>
                 ) : (
                   <span className="font-semibold text-stone-800">${deliveryFee.toLocaleString('es-CO')} COP</span>
                 )}
@@ -175,14 +175,14 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
             <div className="pt-2 border-t border-stone-200 flex justify-between items-baseline">
               <span className="text-xs font-bold text-stone-900 uppercase">Total:</span>
-              <span className="text-xl font-black text-emerald-950 font-display">
+              <span className="text-xl font-black text-blue-950 font-display">
                 ${total.toLocaleString('es-CO')} COP
               </span>
             </div>
 
             <button
               onClick={handleWhatsAppCheckout}
-              className="w-full py-3 px-4 rounded-xl bg-emerald-700 text-white font-bold text-xs sm:text-sm hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer"
+              className="w-full py-3 px-4 rounded-xl bg-blue-700 text-white font-bold text-xs sm:text-sm hover:bg-blue-800 transition-colors flex items-center justify-center gap-2 shadow-xs cursor-pointer"
             >
               <span>Completar Pedido por WhatsApp</span>
               <ArrowRight className="w-4 h-4" />
@@ -190,7 +190,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
             <button
               onClick={() => { onClose(); onGoToCustomOrder(); }}
-              className="w-full py-2 px-3 rounded-lg border border-emerald-300 text-emerald-800 text-xs font-bold hover:bg-emerald-50 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+              className="w-full py-2 px-3 rounded-lg border border-blue-300 text-blue-800 text-xs font-bold hover:bg-blue-50 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>O arma tu caja personalizada con gramajes exactos</span>
