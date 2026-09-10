@@ -48,49 +48,38 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:info@freshpickfruits.com`}
                 className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:bg-emerald-700 hover:text-white transition-colors"
-                aria-label="Instagram"
+                aria-label="Email"
               >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-300 hover:bg-emerald-700 hover:text-white transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
+                <Mail className="w-4 h-4" />
               </a>
             </div>
           </div>
 
           <div className="lg:col-span-2 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Cosecha de Arándanos
+              Nuestros Arándanos
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
                 <a href="#variedades" className="hover:text-emerald-400 transition-colors">
-                  Biloxi & Emerald 250g
+                  Estuche 125g
                 </a>
               </li>
               <li>
                 <a href="#variedades" className="hover:text-emerald-400 transition-colors">
-                  Arándanos Jumbo (+18mm)
+                  Estuche 250g
                 </a>
               </li>
               <li>
                 <a href="#variedades" className="hover:text-emerald-400 transition-colors">
-                  Caja Familiar Ahorro 1kg
+                  Estuche 500g
                 </a>
               </li>
               <li>
-                <a href="#variedades" className="hover:text-emerald-400 transition-colors">
-                  Arándanos Congelados IQF
+                <a href="#planes-mensuales" className="hover:text-emerald-400 transition-colors">
+                  Planes Mensuales
                 </a>
               </li>
             </ul>
@@ -138,7 +127,7 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Atención & Despachos
             </h4>
-            
+
             <div className="space-y-2 text-stone-400">
               <div className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
@@ -151,8 +140,8 @@ export const Footer: React.FC = () => {
               <div className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-white font-medium">Correo Comercial:</span>
-                  <span>contacto@freshpickfrutas.com</span>
+                  <span className="block text-white font-medium">Correo:</span>
+                  <span>info@freshpickfruits.com</span>
                 </div>
               </div>
 
@@ -160,8 +149,9 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-white font-medium">Ubicación de Cultivos:</span>
-                  <span>Cordillera Oriental, 2.450 m.s.n.m.</span>
-                  <span className="block text-[11px] text-stone-500">Despachos diarios a Bogotá y Sabana</span>
+                  <span>Vereda Santa Bárbara · Guasca, Cundinamarca</span>
+                  <span className="block text-[11px] text-stone-500">Más de 2.800 m.s.n.m.</span>
+                  <span className="block text-[11px] text-stone-500">Entregas: martes y miércoles · 8:00 a.m. – 3:00 p.m.</span>
                 </div>
               </div>
             </div>
@@ -169,7 +159,7 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[11px] text-emerald-300">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Certificados por GLOBALG.A.P. & GRASP</span>
+                <span>GLOBALG.A.P. · GRASP · ICA</span>
               </div>
             </div>
           </div>
@@ -177,14 +167,12 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
-          <p>© {new Date().getFullYear()} Fresh Pick - Arándanos de Alta Montaña. Todos los derechos reservados.</p>
-          
+          <p>© {new Date().getFullYear()} Fresh Pick - Arándanos de Alta Montaña · Fundada en 2017 · Guasca, Colombia. Todos los derechos reservados.</p>
+
           <div className="flex items-center gap-2 text-[11px]">
             <span>Medios de pago:</span>
-            <span className="px-2 py-0.5 bg-stone-900 rounded text-stone-300 font-medium">Nequi</span>
-            <span className="px-2 py-0.5 bg-stone-900 rounded text-stone-300 font-medium">Daviplata</span>
-            <span className="px-2 py-0.5 bg-stone-900 rounded text-stone-300 font-medium">Bancolombia PSE</span>
-            <span className="px-2 py-0.5 bg-stone-900 rounded text-stone-300 font-medium">Contraentrega</span>
+            <span className="px-2 py-0.5 bg-stone-900 rounded text-stone-300 font-medium">Transferencia</span>
+            <span className="px-2 py-0.5 bg-stone-900 rounded text-stone-300 font-medium">Bre-B @9010401617</span>
           </div>
         </div>
 

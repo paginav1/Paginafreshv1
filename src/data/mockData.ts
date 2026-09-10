@@ -2,124 +2,111 @@ import { FruitItem, PackagingOption, AddOnItem, SubscriptionPlan, RecipeItem, Te
 
 export const FRUITS_DATA: FruitItem[] = [
   {
-    id: 'arandanos-premium',
-    name: 'Arándanos Biloxi & Emerald (250g)',
+    id: 'arandanos-125g',
+    name: 'Arándanos Premium 125g',
     scientificName: 'Vaccinium corymbosum',
-    variety: 'Biloxi / Emerald Alta Montaña',
+    variety: 'Alta Montaña · Cosecha Manual',
     category: 'frescos',
-    tagline: 'Crocantes, dulces y con pruina natural intacta',
-    description: 'Nuestra fruta insignia. Cultivados a más de 2.450 m.s.n.m. bajo sol andino y neblina matutina, lo que potencia su concentración de antioxidantes y produce una pruina natural perfecta.',
-    pricePerGram: 28, // 28 COP / g -> $7.000 COP los 250g
+    tagline: 'Estuche individual ideal para probar y llevar a todas partes',
+    description: 'Arándanos premium de alta montaña cultivados con polinización 100% natural y cosecha manual selectiva. Libres de ceras artificiales y con cero residualidad de productos químicos, garantizan la máxima frescura, textura crujiente y pureza desde el origen.',
+    pricePerGram: 64, // $8.000 COP los 125g -> 64 COP/g
+    defaultGramUnit: 125,
+    standardPrice: 8000,
+    presentation: 'Estuche 125g',
+    imageUrl: '/assets/blueberries.jpg',
+    imageAlt: 'Arándanos premium de alta montaña Fresh Pick en estuche de 125g, cultivados con polinización 100% natural y cero residualidad química',
+    brix: '13.0° – 15.0° Brix',
+    altitude: 'Más de 2.800 m.s.n.m.',
+    benefits: [
+      'Cero residualidad química',
+      'Polinización 100% natural',
+      'Cosecha manual selectiva',
+      'Sin ceras artificiales'
+    ],
+    shelfLife: '14 - 18 días en refrigeración',
+    inStock: true,
+    popular: false,
+  },
+  {
+    id: 'arandanos-250g',
+    name: 'Arándanos Premium 250g',
+    scientificName: 'Vaccinium corymbosum',
+    variety: 'Alta Montaña · Cosecha Manual',
+    category: 'frescos',
+    tagline: 'Formato ideal para familias pequeñas y consumo diario',
+    description: 'Arándanos premium de alta montaña cultivados con polinización 100% natural y cosecha manual selectiva. Libres de ceras artificiales y con cero residualidad de productos químicos, garantizan la máxima frescura, textura crujiente y pureza desde el origen.',
+    pricePerGram: 60, // $15.000 COP los 250g -> 60 COP/g
     defaultGramUnit: 250,
-    standardPrice: 7000,
-    presentation: 'Clamshell ventilado 250g',
-    imageUrl: 'https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80',
-    imageAlt: 'Arándanos frescos variedad Biloxi y Emerald en clamshell de 250g, cosechados a 2.480 msnm con pruina natural intacta y agricultura responsable',
-    brix: '14.5° - 16° Brix',
-    altitude: '2.480 m.s.n.m.',
-    benefits: ['Rico en antocianinas', 'Mejora la memoria y concentración', 'Bajo índice glucémico', '100% libre de ceras artificiales'],
-    shelfLife: '14 - 18 días en refrigeración',
-    inStock: true,
-    popular: true,
-  },
-  {
-    id: 'arandanos-jumbo-gourmet',
-    name: 'Arándanos Jumbo Selección Especial (500g)',
-    scientificName: 'Vaccinium corymbosum (Jumbo)',
-    variety: 'Selección Calibre >18mm',
-    category: 'jumbo',
-    tagline: 'Bayas gigantes seleccionadas a mano, máxima dulzura y crocancia',
-    description: 'Frutos de calibre gigante escogidos a mano durante la cosecha. Sorprenden por su gran tamaño, estallido de jugo en boca y alto grado de concentración de azúcares naturales.',
-    pricePerGram: 30, // $15.000 COP los 500g
-    defaultGramUnit: 500,
     standardPrice: 15000,
-    presentation: 'Eco-estuche rígido 500g',
-    imageUrl: 'https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?auto=format&fit=crop&w=800&q=80',
-    imageAlt: 'Arándanos Jumbo Selección Especial de más de 18mm de diámetro, cosechados a mano en cultivo andino de alta montaña con buenas prácticas agrícolas',
-    brix: '15.5° - 17° Brix',
-    altitude: '2.520 m.s.n.m.',
-    benefits: ['Calibre extra superior >18mm', 'Mayor textura y firmeza', 'Selección manual de máxima categoría'],
+    presentation: 'Estuche 250g',
+    imageUrl: '/assets/blueberries.jpg',
+    imageAlt: 'Arándanos premium de alta montaña Fresh Pick en estuche de 250g, cosechados a mano a más de 2.800 msnm con pruina natural intacta',
+    brix: '13.0° – 15.0° Brix',
+    altitude: 'Más de 2.800 m.s.n.m.',
+    benefits: [
+      'Cero residualidad química',
+      'Polinización 100% natural',
+      'Cosecha manual selectiva',
+      'Sin ceras artificiales'
+    ],
     shelfLife: '14 - 18 días en refrigeración',
     inStock: true,
     popular: true,
   },
   {
-    id: 'arandanos-familiares-1kg',
-    name: 'Caja Familiar Ahorro de Arándanos (1.000g)',
-    scientificName: 'Vaccinium corymbosum (Grado Exportación)',
-    variety: 'Biloxi & Emerald Grado 1',
-    category: 'familiar',
-    tagline: '1 Kilo de arándanos frescos recién cosechados al mejor precio',
-    description: 'La opción más conveniente y rendidora para hogares, amantes de los smoothies y el consumo diario. 1.000 gramos de arándanos frescos de primera calidad directamente del campo.',
-    pricePerGram: 25, // $25.000 COP el kilo (1000g)
-    defaultGramUnit: 1000,
-    standardPrice: 25000,
-    presentation: 'Caja Kraft respirable 1.000g',
-    imageUrl: 'https://images.unsplash.com/photo-1563746098251-d35aef196e83?auto=format&fit=crop&w=800&q=80',
-    imageAlt: 'Caja familiar de 1kg de arándanos frescos de alta montaña grado exportación, libres de ceras químicas y cosechados con agricultura limpia',
-    brix: '14.5° - 16° Brix',
-    altitude: '2.450 m.s.n.m.',
-    benefits: ['Formato ahorro familiar', 'Cosechado en el amanecer del despacho', 'Ideal para consumo de toda la semana'],
-    shelfLife: '14 - 18 días en refrigeración',
-    inStock: true,
-    popular: true,
-  },
-  {
-    id: 'arandanos-congelados-iqf',
-    name: 'Arándanos Congelados IQF Grado A (500g)',
-    scientificName: 'Vaccinium corymbosum (IQF)',
-    variety: 'Congelación Rápida Individual',
-    category: 'congelados',
-    tagline: 'Enteros y sueltos para batidos, repostería y larga conservación',
-    description: 'Arándanos seleccionados congelados individualmente (IQF) horas después de su cosecha. No forman bloques de hielo y conservan el 100% de sabor, vitaminas y antioxidantes.',
-    pricePerGram: 22, // $11.000 COP los 500g
+    id: 'arandanos-500g',
+    name: 'Arándanos Premium 500g',
+    scientificName: 'Vaccinium corymbosum',
+    variety: 'Alta Montaña · Cosecha Manual',
+    category: 'frescos',
+    tagline: 'Estuche familiar, perfecto para compartir y para recetas',
+    description: 'Arándanos premium de alta montaña cultivados con polinización 100% natural y cosecha manual selectiva. Libres de ceras artificiales y con cero residualidad de productos químicos, garantizan la máxima frescura, textura crujiente y pureza desde el origen.',
+    pricePerGram: 60, // $30.000 COP los 500g -> 60 COP/g
     defaultGramUnit: 500,
-    standardPrice: 11000,
-    presentation: 'Bolsa hermética con cierre fácil 500g',
-    imageUrl: 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=800&q=80',
-    imageAlt: 'Arándanos ultracongelados IQF grado A en bolsa resellable de 500g, granos sueltos enteros de alta montaña y agricultura limpia para repostería y batidos',
-    brix: '14° - 15° Brix',
-    altitude: '2.480 m.s.n.m.',
-    benefits: ['Ultracongelados sin perder nutrientes', 'Granos 100% sueltos sin apelmazar', 'Durabilidad de hasta 12 meses en congelador'],
-    shelfLife: '12 meses en congelador (-18°C)',
+    standardPrice: 30000,
+    presentation: 'Estuche 500g',
+    imageUrl: '/assets/blueberries.jpg',
+    imageAlt: 'Arándanos premium de alta montaña Fresh Pick en estuche familiar de 500g, cosechados a mano con agricultura limpia',
+    brix: '13.0° – 15.0° Brix',
+    altitude: 'Más de 2.800 m.s.n.m.',
+    benefits: [
+      'Cero residualidad química',
+      'Polinización 100% natural',
+      'Cosecha manual selectiva',
+      'Sin ceras artificiales'
+    ],
+    shelfLife: '14 - 18 días en refrigeración',
     inStock: true,
+    popular: false,
   }
 ];
 
 export const PACKAGING_OPTIONS: PackagingOption[] = [
   {
     id: 'pack-eco-kraft',
-    name: 'Caja Kraft Biodegradable',
-    description: 'Elaborada con cartón virgen reciclable y visor de almidón de maíz. Sostenible y protege la fruta fresca.',
+    name: 'Estuche Kraft Biodegradable',
+    description: 'Estuche de cartón biodegradable con visor, ideal para conservar la frescura y proteger la pruina natural.',
     extraPrice: 0,
     iconName: 'Package',
-    bestFor: 'Uso diario en familia y cocina consciente',
+    bestFor: 'Incluido sin costo en todos los pedidos',
     badge: 'Sin costo adicional'
+  },
+  {
+    id: 'pack-clamshell-refrigerable',
+    name: 'Clamshell Ventilado rPET',
+    description: 'Contenedor transparente de plástico reciclado post-consumo, perfecto para guardar directamente en la nevera.',
+    extraPrice: 2500,
+    iconName: 'Snowflake',
+    bestFor: 'Mayor duración y control de porciones'
   },
   {
     id: 'pack-canasta-regalo',
     name: 'Canasta Artesanal de Fique con Lazo',
-    description: 'Canasta tejida a mano por artesanas andinas, forrada en papel encerado vegetal y lazo decorativo.',
+    description: 'Canasta tejida a mano por artesanas andinas, forrada en papel encerado vegetal.',
     extraPrice: 14000,
     iconName: 'Gift',
-    bestFor: 'Obsequios de cumpleaños, aniversarios y detalles saludables',
+    bestFor: 'Obsequios y detalles especiales',
     badge: 'Favorito para regalo'
-  },
-  {
-    id: 'pack-clamshell-refrigerable',
-    name: 'Set Clamshells rPET Ventilados',
-    description: 'Contenedores individuales transparentes de plástico reciclado post-consumo que caben perfecto en gavetas de nevera.',
-    extraPrice: 3500,
-    iconName: 'Snowflake',
-    bestFor: 'Mayor duración y control de porciones individuales'
-  },
-  {
-    id: 'pack-corporativo-catering',
-    name: 'Caja Gourmet Exhibición Catering',
-    description: 'Caja amplia de doble fondo con divisiones acolchadas, lista para poner en mesas de eventos o buffets.',
-    extraPrice: 18000,
-    iconName: 'Award',
-    bestFor: 'Eventos corporativos, restaurantes y reposterías'
   }
 ];
 
@@ -140,7 +127,7 @@ export const ADDONS_DATA: AddOnItem[] = [
     price: 15000,
     unit: 'Bolsa kraft resellable 350g',
     imageUrl: 'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=400&q=80',
-    imageAlt: 'Bolsa de granola andina artesanal horneada con avena integral, frutos secos y semillas para acompañar arándanos frescos'
+    imageAlt: 'Bolsa de granola andina artesanal horneada con avena integral, frutos secos y semillas'
   },
   {
     id: 'mermelada-arandanos',
@@ -149,60 +136,70 @@ export const ADDONS_DATA: AddOnItem[] = [
     price: 16500,
     unit: 'Tarro gourmet 230g',
     imageUrl: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=80',
-    imageAlt: 'Tarro de mermelada artesanal 0% azúcar añadida elaborada con arándanos frescos de alta montaña y agricultura limpia'
+    imageAlt: 'Tarro de mermelada artesanal 0% azúcar añadida elaborada con arándanos frescos de alta montaña'
   }
 ];
 
 export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
   {
-    id: 'plan-esencial',
-    title: 'Plan Esencial Frescura',
-    subtitle: 'Para personas individuales o parejas que aman los desayunos saludables.',
-    weight: '1.5 kg al mes (375g por semana)',
-    priceMonth: 46000,
-    deliveryFrequency: 'Entregas semanales o quincenales a tu elección',
-    idealFor: '1 - 2 personas',
+    id: 'plan-mensual-fresco',
+    title: 'Plan Mensual Fresco',
+    subtitle: 'Para los que quieren arándano fresco cada semana del mes.',
+    weight: '2.000g al mes (4 entregas de 500g)',
+    priceMonth: 144000,
+    deliveryFrequency: 'Semanal · 500g por entrega',
+    idealFor: 'Hogares y consumo semanal',
     features: [
-      'Arándanos Biloxi seleccionados de cosecha fresca semanal',
-      'Despacho en 24h tras la recolección matutina',
-      '10% de descuento incluido respecto al precio por gramo',
-      'Pausa o cancela tu suscripción en cualquier momento',
-      'Prioridad de cosecha los días lunes y jueves'
+      'Entregas semanales de 500g garantizan arándano fresco cada semana',
+      'Estuche 500g por despacho',
+      'Cosechado en su punto óptimo de madurez',
+      'Cancela o pausa cuando quieras'
+    ],
+    isPopular: true
+  },
+  {
+    id: 'plan-mensual-salud',
+    title: 'Plan Mensual Salud',
+    subtitle: 'Pensado para familias que prefieren entregas quincenales en mayor cantidad.',
+    weight: '2.000g al mes (2 entregas de 1.000g)',
+    priceMonth: 132000,
+    deliveryFrequency: 'Quincenal · 1.000g por entrega',
+    idealFor: 'Familias y stock de temporada',
+    features: [
+      'Entregas quincenales de 1.000g',
+      'Mejor precio por gramo',
+      'Estuche 500g (2 unidades por entrega)',
+      'Cancela o pausa cuando quieras'
     ]
   },
   {
-    id: 'plan-familiar',
-    title: 'Plan Familiar Vitalidad',
-    subtitle: 'El favorito de los hogares con niños y amantes de los smoothies.',
-    weight: '3.5 kg al mes (875g por semana)',
-    priceMonth: 95000,
-    deliveryFrequency: 'Entregas semanales los martes o viernes',
-    isPopular: true,
-    idealFor: '3 - 5 personas',
+    id: 'plan-mensual-flexible-fresco',
+    title: 'Plan Mensual Flexible Fresco',
+    subtitle: 'Estuches individuales de 125g servidos semanalmente para máxima frescura.',
+    weight: '2.000g al mes (8 entregas de 250g)',
+    priceMonth: 152000,
+    deliveryFrequency: 'Semanal · 250g por entrega (estuche 125g x 2)',
+    idealFor: 'Personas solas o parejas',
     features: [
-      'Arándanos frescos de alta montaña calibre superior',
-      'Envío a domicilio 100% gratuito todas las semanas',
-      '18% de ahorro sobre precio regular',
-      '1 Frasco de Miel Cruda de la Finca gratis cada mes',
-      'Acceso exclusivo a cosechas limitadas de temporada',
-      'Cajas ecológicas retornables con bono verde'
+      'Entregas semanales en estuches 125g x 2',
+      'Porciones prácticas listas para consumir',
+      'Mayor frescura al recibir fruta cada semana',
+      'Cancela o pausa cuando quieras'
     ]
   },
   {
-    id: 'plan-gourmet-pro',
-    title: 'Plan Gourmet & Negocios',
-    subtitle: 'Diseñado para hogares de alto consumo, repostería casera o cafeterías specialty.',
-    weight: '7.0 kg al mes (1.75 kg por semana)',
-    priceMonth: 175000,
-    deliveryFrequency: '2 entregas semanales programadas',
-    idealFor: 'Familias grandes, fitness & pequeños negocios',
+    id: 'plan-mensual-flexible-salud',
+    title: 'Plan Mensual Flexible Salud',
+    subtitle: 'Estuches individuales servidos quincenalmente para quienes prefieren abastecerse menos veces.',
+    weight: '2.000g al mes (2 entregas de 1.000g)',
+    priceMonth: 140000,
+    deliveryFrequency: 'Quincenal · 1.000g por entrega (estuche 125g x 8)',
+    idealFor: 'Quincenas y consumo moderado',
     features: [
-      'Calibre Jumbo Premium garantizado en cada entrega',
-      'Envíos prioritarios refrigerados sin costo',
-      '25% de ahorro total garantizado',
-      'Atención personalizada con agrónomo vía WhatsApp VIP',
-      'Invitación especial para visita guiada a nuestra finca',
-      'Empaques grado alimentario certificados con trazabilidad'
+      'Entregas quincenales en estuches 125g x 8',
+      'Estuches individuales para control de porciones',
+      'Equilibrio entre frescura y conveniencia',
+      'Cancela o pausa cuando quieras'
     ]
   }
 ];
@@ -210,92 +207,112 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
 export const CERTIFICATIONS_LIST = [
   {
     id: 'global-gap',
-    title: 'GLOBALG.A.P. Certified',
-    code: 'GGN: 4063061238910',
+    title: 'GLOBALG.A.P.',
+    code: 'Inocuidad alimentaria internacional',
     description: 'Estándar internacional de referencia que certifica inocuidad alimentaria rigurosa, trazabilidad completa de cosecha y sostenibilidad ambiental.'
   },
   {
     id: 'grasp',
-    title: 'Evaluación Social GRASP',
-    code: 'GLOBALG.A.P. Risk Assessment on Social Practice',
+    title: 'GRASP',
+    code: 'Evaluación de prácticas sociales',
     description: 'Módulo auditado de responsabilidad social que garantiza el bienestar, salud, seguridad y derechos laborales justos de nuestros trabajadores agrícolas.'
   },
   {
-    id: 'bpa-ica',
-    title: 'BPA ICA Colombia',
-    code: 'Certificado Sanitario ICA N° 25-04-0018',
-    description: 'Acreditación oficial del Instituto Colombiano Agropecuario de producción limpia, inocua y libre de contaminantes.'
+    id: 'ica-predio',
+    title: 'ICA Predio Exportador',
+    code: 'Registro sanitario de producción',
+    description: 'Acreditación oficial del Instituto Colombiano Agropecuario como predio productor habilitado para exportación.'
   },
   {
-    id: 'polinizacion-biofabrica',
-    title: 'Polinización & Biofábrica',
-    code: 'Economía Circular & 40+ Colmenas',
-    description: 'Polinización natural activa con abejas nativas y biofábrica propia que convierte 100% de las podas en abonos orgánicos vivos.'
+    id: 'ica-bpa',
+    title: 'ICA BPA',
+    code: 'Buenas Prácticas Agrícolas',
+    description: 'Certificación del ICA en Buenas Prácticas Agrícolas: producción limpia, inocua y libre de contaminantes.'
   }
 ];
 
 export const RECIPES_DATA: RecipeItem[] = [
   {
-    id: 'smoothie-bowl-antioxidante',
-    title: 'Bowl Andino de Arándanos & Granola',
-    prepTime: '10 min',
-    difficulty: 'Fácil',
-    image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80',
-    imageAlt: 'Bowl antioxidante preparado con arándanos frescos de alta montaña, granola andina artesanal y miel pura de finca con agricultura limpia',
-    description: 'Un desayuno revitalizante rico en polifenoles que te mantendrá con energía durante todo el día.',
-    ingredients: [
-      '150g de Arándanos Fresh Pick congelados',
-      '1 banano maduro congelado',
-      '1/2 taza de leche de almendras o yogurt griego natural',
-      '1 cda de miel cruda de la finca',
-      'Topping: Granola andina, semillas de chía y arándanos frescos enteros'
-    ],
-    instructions: [
-      'Licuar los arándanos con el banano y la leche vegetal a velocidad alta hasta lograr textura espesa.',
-      'Servir de inmediato en un cuenco hondo.',
-      'Decorar con arándanos frescos crocantes, un hilo de miel y la granola artesanal.'
-    ]
-  },
-  {
-    id: 'torta-rustica-berries',
-    title: 'Galette Rústica de Arándanos Andinos',
+    id: 'muffins-arandanos',
+    title: 'Muffins de Arándanos Suaves y Esponjosos',
     prepTime: '35 min',
     difficulty: 'Intermedio',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
-    imageAlt: 'Galette rústica dorada horneada con arándanos enteros de alta montaña recién cosechados con agricultura responsable',
-    description: 'Una galette rústica dorada que resalta los jugos naturales y el brillo de nuestros arándanos recién recolectados.',
+    image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Muffins de arándanos frescos de alta montaña horneados, esponjosos y dorados, elaborados con receta profesional',
+    description: 'Muffins clásicos de arándanos con miga esponjosa, logrados mediante un batido inicial riguroso y horneado de choque que garantiza volumen y textura profesional.',
     ingredients: [
-      '350g de Arándanos Frescos Fresh Pick',
-      '1 lámina de masa quebrada artesanal',
-      '2 cucharadas de panela pulverizada o azúcar morena orgánica',
-      'Ralladura de 1 limón verde y canela al gusto'
+      '250 g de harina de trigo',
+      '2 cucharaditas (10 g) de levadura química (polvos de hornear)',
+      '150 g de azúcar',
+      '60 g de mantequilla blanda',
+      '250 ml de leche',
+      '2 huevos',
+      'Ralladura de limón al gusto',
+      '150 g de arándanos frescos'
     ],
     instructions: [
-      'Extender la masa sobre papel vegetal en una bandeja de horno.',
-      'Mezclar con suavidad los arándanos con la ralladura y la panela.',
-      'Colocar los arándanos en el centro y doblar los bordes rústicamente hacia adentro.',
-      'Hornear a 190°C por 25 minutos hasta dorar la corteza. Servir tibia.'
+      'Areado: bate los huevos con el azúcar durante un mínimo de 3 minutos hasta obtener una mezcla notablemente esponjosa.',
+      'Integra la mantequilla, la leche y la ralladura de limón.',
+      'Mezcla la harina con la levadura e intégrala suavemente.',
+      'Enharina ligeramente los arándanos para evitar que decanten al fondo del molde.',
+      'Reposa la masa en refrigeración por 30 minutos.',
+      'Precalienta el horno a 210°C. Llena los moldes a 2/3 y hornea los primeros 5 minutos a 210°C; luego reduce a 180°C por 15-20 minutos más (total 20-25 min).'
     ]
   },
   {
-    id: 'infusion-tonica-berries',
-    title: 'Limonada Helada de Arándanos & Menta',
-    prepTime: '5 min',
-    difficulty: 'Muy fácil',
-    image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
-    imageAlt: 'Limonada helada refrescante con arándanos frescos de alta montaña macerados y hojas de menta de cultivo limpio',
-    description: 'Bebida de hidratación alcalina con arándanos frescos macerados, menta de huerta y hielo picado.',
+    id: 'panqueques-arandanos',
+    title: 'Panqueques de Arándanos con Limón y Amapola',
+    prepTime: '25 min',
+    difficulty: 'Fácil',
+    image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Panqueques esponjosos con arándanos frescos, ralladura de limón y semillas de amapola, recién hechos en sartén',
+    description: 'Panqueques equilibrados que destacan por el crujiente de la semilla de amapola y la frescura cítrica del limón, con arándanos enteros caramelizados en la superficie.',
     ingredients: [
-      '1 taza de arándanos frescos Fresh Pick',
-      'Jugo de 2 limones frescos',
-      'Hojas de menta o hierbabuena fresca',
-      '1 litro de agua con o sin gas',
-      'Hielo al gusto'
+      '270 g de harina (sin polvos)',
+      '2 cucharaditas de polvos de hornear',
+      '100 g de azúcar',
+      '1 cucharadita de sal',
+      'Ralladura de 1 limón',
+      '1 huevo',
+      '300 ml de leche',
+      '1/2 cucharadita de esencia de vainilla',
+      '10 g de mantequilla sin sal (derretida)',
+      '100 g de arándanos frescos o congelados escurridos',
+      '2 cucharaditas de semillas de amapola'
     ],
     instructions: [
-      'Macerar ligeramente los arándanos y la menta en el fondo de una jarra de vidrio para soltar su jugo azulado.',
-      'Añadir el jugo de limón recién exprimido y el hielo abundante.',
-      'Completar con agua fría y dejar reposar 5 minutos antes de disfrutar.'
+      'Combina harina, sal, azúcar, polvos y ralladura. Forma un hoyo central (método de volcán).',
+      'Vierte leche, huevo y vainilla en el centro. Mezcla gradualmente desde el interior para evitar grumos.',
+      'Añade la mantequilla derretida en forma de hilo mientras bates. Incorpora los arándanos y las semillas de amapola con espátula.',
+      'Cocina en sartén antiadherente a fuego medio-bajo. Voltea únicamente cuando aparezcan burbujas en la superficie.'
+    ]
+  },
+  {
+    id: 'ponque-limon-arandanos',
+    title: 'Ponqué de Limón y Arándanos Súper Húmedo',
+    prepTime: '1 h 15 min',
+    difficulty: 'Intermedio',
+    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Ponqué húmedo de limón y arándanos frescos glaseado, recién horneado con textura esponjosa',
+    description: 'Budín de textura súper húmeda gracias a la combinación de yogur griego y aceite de oliva, con arándanos frescos y un glaseado de limón aplicado solo cuando el ponqué está frío.',
+    ingredients: [
+      '2 tazas de harina de trigo (reservar 2 cucharadas para la fruta)',
+      '3/4 taza (150 g) de azúcar',
+      '1 taza de yogur griego',
+      '2/3 taza de aceite de oliva',
+      '2 huevos',
+      '2 cucharaditas de polvo de hornear',
+      '1 pizca de sal',
+      '1 taza de arándanos frescos',
+      'Ralladura de 2 limones',
+      'Glaseado: 1 taza de azúcar pulverizada + 2-3 cucharadas de limón'
+    ],
+    instructions: [
+      'Bate yogur, aceite y huevos. Suma el azúcar y la ralladura (solo la parte verde para evitar amargor).',
+      'Cierne harina, polvo y sal. Extrae las 2 cucharadas de harina reservadas y cubre con ellas los arándanos (evita el exceso de secos en la masa final).',
+      'Mezcla con espátula. Prohibido batir en exceso para no activar el gluten y comprometer la esponjosidad.',
+      'Hornea en molde de 20x10 cm a 180°C por 55 minutos.',
+      'Glaseado: mezcla azúcar pulverizada con limón y bate vigorosamente hasta obtener textura lisa y densa. Vierte solo cuando el ponqué esté totalmente frío sobre rejilla.'
     ]
   }
 ];
@@ -320,8 +337,8 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
     imageAlt: 'Dr. Santiago Restrepo, médico deportólogo que consume arándanos de alta montaña cultivados con agricultura responsable',
     rating: 5,
-    comment: 'Compro la Caja Familiar de Arándanos semanalmente. Se nota la diferencia de la altitud: son mucho más dulces y la cáscara cruje al morder. Mis hijos ahora comen arándanos frescos en vez de golosinas procesadas.',
-    verifiedOrder: 'Suscripción Plan Familiar Vitalidad'
+    comment: 'Estoy suscrito al Plan Mensual Fresco y la calidad es constante: cada martes llega fruta crujiente, dulce y con la pruina intacta. Lo recomiendo para familias que quieren incorporar antioxidantes reales a su dieta diaria.',
+    verifiedOrder: 'Suscripción Plan Mensual Fresco'
   },
   {
     id: 'test-3',
@@ -331,8 +348,8 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
     imageAlt: 'Mariana Duarte, nutricionista clínica que recomienda arándanos frescos de alta montaña y agricultura limpia',
     rating: 5,
-    comment: 'Poder enviar canastas personalizadas de regalo con mensaje dedicado a mis pacientes y familiares es genial. La presentación con cartón kraft y lazo de fique es hermosa y 100% responsable con el medio ambiente.',
-    verifiedOrder: 'Canasta Artesanal Personalizada con Regalo'
+    comment: 'Recomiendo Fresh Pick a mis pacientes por la transparencia de su proceso: cero ceras, cero residuos y la polinización natural se nota en el sabor. Mis pacientes diabéticos lo toleran perfecto por su bajo índice glucémico.',
+    verifiedOrder: 'Plan Mensual Fresco'
   }
 ];
 
@@ -340,37 +357,49 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     category: 'pedidos',
-    question: '¿Cómo funciona la sección de pedidos personalizados de arándanos?',
-    answer: 'En nuestra sección de pedidos personalizados puedes elegir exactamente la cantidad y formato de arándanos (clamshells 250g, selección jumbo 500g o cajas familiares de 1.000g), el tipo de empaque (desde cajas kraft eco hasta canastas de regalo), el nivel de maduración deseado, notas especiales o dedicatorias, y la fecha de entrega. Al finalizar puedes confirmar directamente en línea o enviarnos el resumen por WhatsApp con un solo clic.'
+    question: '¿Cuál es el pedido mínimo?',
+    answer: 'El pedido mínimo para entrega a domicilio es de 500g de arándanos. Puedes combinar estuches de 125g para alcanzarlo o elegir el estuche de 500g directamente.'
   },
   {
     id: 'faq-2',
-    category: 'calidad',
-    question: '¿Por qué los arándanos de Fresh Pick tienen mejor sabor y firmeza?',
-    answer: 'Nuestros cultivos se encuentran situados a 2.480 metros sobre el nivel del mar en la cordillera andina. La amplitud térmica entre el día y la noche genera una acumulación superior de azúcares naturales (Brix entre 14.5° y 17°) y una consistencia crocante insuperable. Además, practicamos polinización 100% natural con abejas nativas y no usamos ceras artificiales.'
+    category: 'pedidos',
+    question: '¿Cómo puedo hacer un pedido?',
+    answer: 'Puedes hacer tu pedido directamente desde la sección "Armar Pedido" de esta página o escribirnos por WhatsApp al +57 317 893 1026. Te confirmaremos disponibilidad, fecha de despacho y forma de pago.'
   },
   {
     id: 'faq-3',
     category: 'entregas',
-    question: '¿Cuánto tardan en entregar y cómo garantizan la cadena de frío?',
-    answer: 'Recolectamos los arándanos a primera hora del amanecer y los despachamos en vehículos acondicionados el mismo día o a la mañana siguiente (en menos de 24 horas tras la cosecha). Para envíos locales en Bogotá, Sabana, Chía, Cajicá, Cota y municipios aledaños la entrega se realiza el mismo día programado. También contamos con envíos exprés a principales ciudades.'
+    question: '¿Qué días y en qué horario entregan?',
+    answer: 'Realizamos entregas los martes y miércoles de 8:00 a.m. a 3:00 p.m. en la zona de cobertura. Para eventos o pedidos especiales coordinamos la fecha directamente contigo.'
   },
   {
     id: 'faq-4',
-    category: 'pagos',
-    question: '¿Qué métodos de pago tienen disponibles?',
-    answer: 'Aceptamos transferencias inmediatas por Nequi y Daviplata, transferencias Bancolombia / PSE, tarjetas de crédito y débito, y pago contraentrega en efectivo o datafono al recibir tu pedido en tu puerta.'
+    category: 'entregas',
+    question: '¿Cuánto cuesta el envío?',
+    answer: 'El costo de envío base es de $6.000 COP dentro de nuestra zona de cobertura. El envío gratis no aplica actualmente.'
   },
   {
     id: 'faq-5',
-    category: 'pedidos',
-    question: '¿Hay un monto mínimo para hacer un pedido personalizado?',
-    answer: 'No tenemos monto mínimo de compra. Sin embargo, para todos los pedidos superiores a $60.000 COP el envío es completamente GRATIS en nuestra zona de cobertura principal.'
+    category: 'pagos',
+    question: '¿Qué métodos de pago aceptan?',
+    answer: 'Aceptamos transferencia bancaria y Bre-B a la cuenta @9010401617. Tras confirmar el pago programamos tu despacho.'
   },
   {
     id: 'faq-6',
     category: 'calidad',
-    question: '¿Qué certificados respaldan la inocuidad y responsabilidad de sus arándanos?',
-    answer: 'Contamos con la certificación internacional GLOBALG.A.P. (norma mundial para buenas prácticas e inocuidad agrícola) y la acreditación social GRASP (GLOBALG.A.P. Risk Assessment on Social Practice), que certifica el bienestar, salud y condiciones laborales dignas de nuestros recolectadores y trabajadores. También contamos con registro BPA otorgado por el ICA.'
+    question: '¿Qué garantía de frescura tienen?',
+    answer: 'Garantizamos arándanos frescos o te los reemplazamos. Si al recibir tu pedido la fruta no cumple el estándar de calidad que prometemos, escríbenos por WhatsApp y gestionaremos el cambio o reembolso a la mayor brevedad.'
+  },
+  {
+    id: 'faq-7',
+    category: 'calidad',
+    question: '¿Por qué son más dulces y crocantes sus arándanos?',
+    answer: 'Nuestros cultivos están a más de 2.800 m.s.n.m. en la Cordillera Oriental. La amplitud térmica entre el día y la noche concentra azúcares naturales y produce bayas más firmes, con pruina natural intacta.'
+  },
+  {
+    id: 'faq-8',
+    category: 'pedidos',
+    question: '¿Tienen planes mensuales o suscripciones?',
+    answer: 'Sí, ofrecemos 4 planes mensuales de 2.000g al mes (Plan Mensual Fresco, Plan Mensual Salud, Plan Mensual Flexible Fresco y Plan Mensual Flexible Salud) con entregas semanales o quincenales. Puedes suscribirte desde la sección de Planes Mensuales.'
   }
 ];

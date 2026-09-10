@@ -12,15 +12,15 @@ export const RecipesAndTips: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
             <BookOpen className="w-3.5 h-3.5" />
-            <span>Inspiración Culinaria & Consejos</span>
+            <span>Recetas con Arándanos de Alta Montaña</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-display">
-            Recetas Saludables con Arándanos Fresh Pick
+            Repostería Profesional con Arándanos Fresh Pick
           </h2>
           <p className="mt-3 text-base sm:text-lg text-stone-600">
-            Descubre formas deliciosas de integrar arándanos frescos y congelados en tus desayunos, meriendas saludables y postres gourmet.
+            Tres recetas de precisión técnica para sacar el máximo partido a tus arándanos premium: muffins esponjosos, panqueques con amapola y un ponqué húmedo de limón.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export const RecipesAndTips: React.FC = () => {
 
               <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <span className="text-[11px] font-bold text-blue-700 uppercase tracking-wider">
+                  <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">
                     {recipe.difficulty}
                   </span>
                   <h3 className="text-lg font-bold text-stone-900 font-display mt-0.5">
@@ -62,7 +62,7 @@ export const RecipesAndTips: React.FC = () => {
                   </span>
                   <button
                     onClick={() => setSelectedRecipe(recipe)}
-                    className="text-xs font-bold text-blue-800 hover:text-blue-950 flex items-center gap-1 cursor-pointer"
+                    className="text-xs font-bold text-emerald-800 hover:text-emerald-950 flex items-center gap-1 cursor-pointer"
                   >
                     <span>Ver Receta</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -92,7 +92,7 @@ export const RecipesAndTips: React.FC = () => {
                   <X className="w-5 h-5" />
                 </button>
                 <div className="absolute bottom-3 left-4 right-4 text-white">
-                  <span className="text-xs text-blue-300 font-semibold">{selectedRecipe.prepTime} · Dificultad {selectedRecipe.difficulty}</span>
+                  <span className="text-xs text-emerald-300 font-semibold">{selectedRecipe.prepTime} · Dificultad {selectedRecipe.difficulty}</span>
                   <h3 className="text-xl font-bold font-display">{selectedRecipe.title}</h3>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export const RecipesAndTips: React.FC = () => {
               <div className="p-6 overflow-y-auto space-y-5 text-stone-700 text-xs sm:text-sm">
                 <div>
                   <h4 className="font-bold text-stone-900 text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <Utensils className="w-4 h-4 text-blue-700" />
+                    <Utensils className="w-4 h-4 text-emerald-700" />
                     <span>Ingredientes</span>
                   </h4>
                   <ul className="space-y-1.5 list-disc list-inside text-stone-600">

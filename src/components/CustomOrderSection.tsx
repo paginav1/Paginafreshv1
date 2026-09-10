@@ -61,8 +61,9 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
   }, 0);
   const packagingCost = selectedPackaging ? selectedPackaging.extraPrice : 0;
   const subtotal = fruitsCost + packagingCost;
-  const isFreeDelivery = subtotal >= 60000;
-  const deliveryFee = totalGrams === 0 ? 0 : isFreeDelivery ? 0 : 7000;
+  // Pedido mínimo: 500g. Envío base $6.000 COP (no aplica envío gratis actualmente).
+  const meetsMinOrder = totalGrams >= 500;
+  const deliveryFee = !meetsMinOrder || totalGrams === 0 ? 0 : 6000;
   const grandTotal = Math.max(0, subtotal + deliveryFee);
 
   const handleGramsChange = (fruitId: string, delta: number) => {
@@ -75,6 +76,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
   const validateForm = () => {
     const errors: Record<string, string> = {};
     if (totalGrams === 0) errors.fruits = 'Selecciona al menos un formato de arándanos.';
+    else if (totalGrams < 500) errors.fruits = 'El pedido mínimo es de 500g. Por favor ajusta la cantidad.';
     if (!customerName.trim()) errors.customerName = 'Ingresa tu nombre.';
     if (!customerPhone.trim() || customerPhone.trim().length < 7) errors.customerPhone = 'Ingresa un WhatsApp válido.';
     if (!deliveryAddress.trim()) errors.deliveryAddress = 'Ingresa la dirección de entrega.';
@@ -133,11 +135,13 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
         `*Cliente:* ${customerName}%0A` +
         `*Teléfono:* ${customerPhone}%0A` +
         `*Dirección:* ${deliveryCity}, ${deliveryAddress}%0A` +
-        `*Fecha:* ${deliveryDate}%0A%0A` +
+        `*Fecha de entrega:* ${deliveryDate}%0A%0A` +
         `*Arándanos:*%0A${fruitsSummary}%0A%0A` +
         `*Empaque:* ${selectedPackaging?.name}%0A` +
+        `*Subtotal:* $${subtotal.toLocaleString('es-CO')} COP%0A` +
+        `*Envío:* $${deliveryFee.toLocaleString('es-CO')} COP%0A` +
         `*TOTAL:* $${grandTotal.toLocaleString('es-CO')} COP%0A%0A` +
-        `Por favor confirmen el despacho. ¡Gracias!`;
+        `Confirmo pedido. Realizaré pago por transferencia o Bre-B @9010401617. ¡Gracias!`;
       window.open(`https://wa.me/${WA}?text=${msg}`, '_blank');
     }
   };
@@ -186,7 +190,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
             Arma tu Pedido de Arándanos en Línea
           </h2>
           <p className="mt-3 text-stone-600">
-            Elige gramos, empaque y confirma por WhatsApp al +57 317 893 1026
+            Elige 125g, 250g o 500g. Mínimo 500g. Entregas martes y miércoles (8:00 a.m. – 3:00 p.m.). Pagos por transferencia o Bre-B @9010401617.
           </p>
         </div>
 
@@ -293,7 +297,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
               <h3 className="font-bold text-lg">Resumen</h3>
               <p className="text-sm text-stone-600">Peso total: <strong>{totalGrams}g</strong></p>
               <p className="text-sm text-stone-600">Subtotal: ${subtotal.toLocaleString('es-CO')} COP</p>
-              <p className="text-sm text-stone-600">Envío: {isFreeDelivery ? 'Gratis' : `$${deliveryFee.toLocaleString('es-CO')}`}</p>
+              <p className="text-sm text-stone-600">Envío: {deliveryFee === 0 ? 'Gratis' : `$${deliveryFee.toLocaleString('es-CO')}`}</p>
               <p className="text-2xl font-black text-[#1B4D3E]">${grandTotal.toLocaleString('es-CO')} COP</p>
               <button
                 type="button"

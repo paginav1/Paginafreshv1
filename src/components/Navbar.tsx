@@ -48,11 +48,11 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2 truncate">
             <span className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="font-medium">Cosecha matutina de hoy:</span>
-            <span className="hidden sm:inline text-emerald-200">Arándanos Biloxi y Emerald frescos listos para despacho en 24h</span>
+            <span className="font-medium">Arándanos frescos listos para pedidos</span>
+            <span className="hidden sm:inline text-emerald-200">· Cosecha del día en Guasca, Cundinamarca</span>
           </div>
           <div className="flex items-center gap-4 text-xs shrink-0">
-            <span className="hidden md:inline text-emerald-200">🌱 100% Polinización Natural</span>
+            <span className="hidden md:inline text-emerald-200">🌱 Cuidamos tu alimento, a quien lo cultiva y nuestro planeta</span>
             <a
               href="https://wa.me/573178931026?text=Hola%20Fresh%20Pick,%20quiero%20hacer%20un%20pedido%20de%20ar%C3%A1ndanos%20frescos"
               target="_blank"
