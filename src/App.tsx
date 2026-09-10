@@ -85,7 +85,7 @@ export default function App() {
   const totalCartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-stone-900 font-sans selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#F7F5F0] text-stone-900 font-sans selection:bg-[#1B4D3E] selection:text-white">
       {/* Navbar */}
       <Navbar
         cartItemCount={totalCartCount}
