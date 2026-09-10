@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export const FloatingWhatsApp: React.FC = () => {
+  const [isOnline, setIsOnline] = useState(true);
+
+  useEffect(() => {
+    const checkSchedule = () => {
+      try {
+        const colDate = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Bogota' }));
+        const hour = colDate.getHours();
+        setIsOnline(hour >= 8 && hour < 18);
+      } catch {
+        const hour = new Date().getHours();
+        setIsOnline(hour >= 8 && hour < 18);
+      }
+    };
+    checkSchedule();
+    const interval = setInterval(checkSchedule, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <motion.aside
       aria-label="Contacto directo por WhatsApp"
@@ -17,8 +35,19 @@ export const FloatingWhatsApp: React.FC = () => {
         damping: 15,
       }}
     >
-      <div className="hidden sm:block bg-stone-900 text-white text-xs py-1.5 px-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-        ¿Dudas con tu pedido? ¡Escríbenos!
+      <div className="hidden sm:flex flex-col items-end bg-stone-900/95 backdrop-blur-xs text-white py-2 px-3.5 rounded-2xl shadow-xl border border-stone-800 opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none text-right">
+        <span className="text-xs font-semibold text-stone-100">
+          ¿Dudas con tu pedido? ¡Escríbenos!
+        </span>
+        <div className="flex items-center gap-1.5 mt-0.5 text-[11px] font-medium text-emerald-400">
+          <span className="relative flex h-2 w-2 shrink-0">
+            {isOnline && (
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            )}
+            <span className={`relative inline-flex rounded-full h-2 w-2 ${isOnline ? 'bg-emerald-500' : 'bg-amber-400'}`} />
+          </span>
+          <span>Estamos en línea de 8am a 6pm</span>
+        </div>
       </div>
       
       <a
