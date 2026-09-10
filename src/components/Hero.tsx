@@ -8,10 +8,11 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-stone-50 via-blue-50/40 to-[#f8fafc] pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-blue-950/5">
-      {/* Decorative backdrop elements */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-blue-200/35 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-sky-100/40 blur-3xl pointer-events-none" />
+    <section className="relative overflow-hidden fp-gradient-hero pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-stone-200/60">
+      {/* Decorative backdrop elements - warmer organic tones */}
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-emerald-200/30 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-10 left-10 w-72 h-72 rounded-full bg-amber-100/40 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-green-100/20 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -19,19 +20,25 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
           {/* Text Content */}
           <div className="lg:col-span-7 space-y-6 text-left">
             {/* Top pill badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/90 border border-blue-300 text-blue-900 text-xs sm:text-sm font-semibold shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+            <div className="fp-pill text-xs sm:text-sm shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
               <span>Cultivo Responsable de Alta Montaña · Colombia</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-stone-900 tracking-tight leading-[1.12] font-display">
-              Arándanos frescos con la <span className="text-blue-700 underline decoration-blue-300 decoration-wavy decoration-2">intensidad y el carácter</span> que nacen en la alta montaña.
+            <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black text-stone-900 tracking-tight leading-[1.12] font-display">
+              Arándanos frescos con la{' '}
+              <span className="text-[#1B4D3E] underline decoration-emerald-300/80 decoration-wavy decoration-2 underline-offset-4">
+                intensidad y el carácter
+              </span>{' '}
+              que nacen en la alta montaña.
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-stone-600 max-w-2xl leading-relaxed">
-              En <strong className="text-stone-900 font-semibold">Fresh Pick</strong> cultivamos exclusivamente arándanos de alta montaña a más de 2.480 m.s.n.m. con polinización 100% natural, cero ceras artificiales y cosecha manual selectiva.
+              En <strong className="text-stone-900 font-semibold">Fresh Pick</strong> cultivamos
+              exclusivamente arándanos de alta montaña a más de 2.480 m.s.n.m. con polinización
+              100% natural, cero ceras artificiales y cosecha manual selectiva.
             </p>
 
             {/* CTAs */}
@@ -39,9 +46,9 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
               <button
                 id="hero-custom-order-btn"
                 onClick={onGoToCustomOrder}
-                className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-blue-700 text-white font-bold text-base hover:bg-blue-800 active:scale-[0.98] transition-all shadow-md shadow-blue-800/20 hover:shadow-lg hover:shadow-blue-800/30 cursor-pointer"
+                className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 fp-btn-primary text-base active:scale-[0.98] cursor-pointer"
               >
-                <Sparkles className="w-5 h-5 text-blue-200 group-hover:rotate-12 transition-transform" />
+                <Sparkles className="w-5 h-5 text-emerald-200 group-hover:rotate-12 transition-transform" />
                 <span>Haz tu Pedido de Arándanos en Línea</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -49,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
               <button
                 id="hero-explore-catalog-btn"
                 onClick={onExploreFruits}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-stone-300 text-stone-700 font-semibold text-base hover:bg-stone-50 hover:text-blue-800 hover:border-blue-300 active:scale-[0.98] transition-all cursor-pointer shadow-xs"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 fp-btn-secondary text-base active:scale-[0.98] cursor-pointer"
               >
                 <span>Explorar Cosecha de Arándanos</span>
               </button>
@@ -58,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
             {/* Key Value Badges */}
             <div className="pt-6 border-t border-stone-200/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-700 shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
@@ -68,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
               </div>
 
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
                   <Award className="w-4 h-4" />
                 </div>
                 <div>
@@ -78,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
               </div>
 
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-800 shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-lime-100 flex items-center justify-center text-lime-800 shrink-0">
                   <HeartHandshake className="w-4 h-4" />
                 </div>
                 <div>
@@ -88,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
               </div>
 
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-800 shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-teal-100 flex items-center justify-center text-teal-800 shrink-0">
                   <Clock className="w-4 h-4" />
                 </div>
                 <div>
@@ -100,12 +107,12 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
 
           </div>
 
-          {/* Visual Showcase / High Resolution Imagery Card */}
+          {/* Visual Showcase */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Primary Image Container */}
-              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-blue-950/20 border-4 border-white aspect-[4/3] sm:aspect-[5/4] relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl shadow-emerald-950/15 border-4 border-white aspect-[4/3] sm:aspect-[5/4] relative">
                 <img
                   src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=1200&q=85"
                   alt="Arándanos frescos de Fresh Pick recién cosechados a mano en cultivo andino de alta montaña a 2.480 msnm con agricultura responsable y limpia"
@@ -116,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
                 
                 {/* Caption on image */}
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-blue-600/90 text-[11px] font-bold uppercase tracking-wider mb-1">
+                  <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-700/90 text-[11px] font-bold uppercase tracking-wider mb-1">
                     Cosecha Manual
                   </span>
                   <p className="text-sm font-semibold">Arándanos Biloxi Seleccionados</p>
@@ -124,24 +131,26 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
                 </div>
               </div>
 
-              {/* Floating Floating Feature Box 1 */}
-              <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-white p-3.5 sm:p-4 rounded-xl shadow-xl border border-stone-100 flex items-center gap-3.5 max-w-xs animate-in fade-in slide-in-from-bottom-3 duration-500">
-                <div className="w-11 h-11 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center text-2xl">
+              {/* Floating Feature Box 1 */}
+              <div className="absolute -bottom-6 -left-4 sm:-left-8 bg-white p-3.5 sm:p-4 rounded-xl shadow-xl border border-stone-100/80 flex items-center gap-3.5 max-w-xs">
+                <div className="w-11 h-11 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-2xl">
                   🫐
                 </div>
                 <div>
                   <div className="text-xs font-bold text-stone-900">Arándano Calibre Jumbo</div>
                   <div className="text-[11px] text-stone-500">Pruina natural protectora intacta</div>
-                  <div className="text-xs font-bold text-blue-700 mt-0.5">$7.000 COP <span className="font-normal text-stone-500 text-[10px]">/ 250g</span></div>
+                  <div className="text-xs font-bold text-emerald-800 mt-0.5">
+                    $7.000 COP <span className="font-normal text-stone-500 text-[10px]">/ 250g</span>
+                  </div>
                 </div>
               </div>
 
               {/* Floating Feature Box 2 */}
-              <div className="hidden sm:flex absolute -top-5 -right-4 bg-blue-950 text-white p-3.5 rounded-xl shadow-xl border border-blue-700/50 items-center gap-3">
-                <div className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-ping" />
+              <div className="hidden sm:flex absolute -top-5 -right-4 bg-[#1B4D3E] text-white p-3.5 rounded-xl shadow-xl border border-emerald-700/40 items-center gap-3">
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
                 <div className="text-xs">
                   <p className="font-bold">Pedidos Abiertos Hoy</p>
-                  <p className="text-blue-200 text-[11px]">Envíos programados a domicilio</p>
+                  <p className="text-emerald-200 text-[11px]">Envíos programados a domicilio</p>
                 </div>
               </div>
 
