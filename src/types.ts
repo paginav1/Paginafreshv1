@@ -1,0 +1,112 @@
+export interface FruitItem {
+  id: string;
+  name: string;
+  scientificName: string;
+  variety: string;
+  category: 'berries' | 'exoticas' | 'packs';
+  tagline: string;
+  description: string;
+  pricePerGram: number; // in COP per gram, e.g., 28 COP/g (28.000 COP / kg)
+  defaultGramUnit: number; // e.g. 250g
+  standardPrice: number; // presentation standard price e.g. 250g
+  presentation: string; // e.g. "Clamshell 250g"
+  imageUrl: string;
+  brix: string; // e.g. "14° - 16° Brix"
+  altitude: string; // e.g. "2.450 m.s.n.m."
+  benefits: string[];
+  shelfLife: string;
+  inStock: boolean;
+  popular?: boolean;
+}
+
+export interface CustomFruitSelection {
+  fruitId: string;
+  grams: number; // quantity in grams
+}
+
+export interface PackagingOption {
+  id: string;
+  name: string;
+  description: string;
+  extraPrice: number;
+  iconName: string;
+  bestFor: string;
+  badge?: string;
+}
+
+export interface AddOnItem {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  unit: string;
+  imageUrl: string;
+}
+
+export interface CustomOrder {
+  id?: string;
+  packagingId: string;
+  fruits: CustomFruitSelection[];
+  addOns: string[]; // ids of selected addons
+  ripeness: 'ready_now' | 'firm_for_week' | 'ripe_for_smoothies';
+  giftMessage?: string;
+  recipientName?: string;
+  customerName: string;
+  customerPhone: string;
+  customerEmail: string;
+  deliveryCity: string;
+  deliveryAddress: string;
+  deliveryDate: string;
+  deliveryTimeSlot: 'morning' | 'afternoon';
+  frequency: 'one_time' | 'weekly' | 'biweekly';
+  notes?: string;
+  paymentMethod: 'nequi_daviplata' | 'transfer' | 'card' | 'cash_on_delivery';
+  subtotal: number;
+  packagingCost: number;
+  addOnsCost: number;
+  discount: number;
+  deliveryFee: number;
+  total: number;
+  createdAt: string;
+}
+
+export interface SubscriptionPlan {
+  id: string;
+  title: string;
+  subtitle: string;
+  weight: string;
+  priceMonth: number;
+  deliveryFrequency: string;
+  features: string[];
+  isPopular?: boolean;
+  idealFor: string;
+}
+
+export interface RecipeItem {
+  id: string;
+  title: string;
+  prepTime: string;
+  difficulty: string;
+  image: string;
+  description: string;
+  ingredients: string[];
+  instructions: string[];
+}
+
+export interface TestimonialItem {
+  id: string;
+  name: string;
+  role: string;
+  city: string;
+  avatar: string;
+  rating: number;
+  comment: string;
+  verifiedOrder: string;
+}
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'pedidos' | 'calidad' | 'entregas' | 'pagos';
+}
