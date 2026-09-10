@@ -11,6 +11,7 @@ export interface FruitItem {
   standardPrice: number; // presentation standard price e.g. 250g
   presentation: string; // e.g. "Clamshell 250g"
   imageUrl: string;
+  imageAlt?: string;
   brix: string; // e.g. "14° - 16° Brix"
   altitude: string; // e.g. "2.450 m.s.n.m."
   benefits: string[];
@@ -41,6 +42,7 @@ export interface AddOnItem {
   price: number;
   unit: string;
   imageUrl: string;
+  imageAlt?: string;
 }
 
 export interface CustomOrder {
@@ -88,6 +90,7 @@ export interface RecipeItem {
   prepTime: string;
   difficulty: string;
   image: string;
+  imageAlt?: string;
   description: string;
   ingredients: string[];
   instructions: string[];
@@ -99,6 +102,7 @@ export interface TestimonialItem {
   role: string;
   city: string;
   avatar: string;
+  imageAlt?: string;
   rating: number;
   comment: string;
   verifiedOrder: string;

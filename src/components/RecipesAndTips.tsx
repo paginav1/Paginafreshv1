@@ -34,7 +34,7 @@ export const RecipesAndTips: React.FC = () => {
               <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
                 <img
                   src={recipe.image}
-                  alt={recipe.title}
+                  alt={recipe.imageAlt || `Receta saludable con arándanos frescos de alta montaña: ${recipe.title}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-xs text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
@@ -81,7 +81,7 @@ export const RecipesAndTips: React.FC = () => {
               <div className="relative aspect-[16/8] bg-stone-900">
                 <img
                   src={selectedRecipe.image}
-                  alt={selectedRecipe.title}
+                  alt={selectedRecipe.imageAlt || `Preparación de ${selectedRecipe.title} con arándanos frescos de alta montaña y agricultura limpia`}
                   className="w-full h-full object-cover"
                 />
                 <button

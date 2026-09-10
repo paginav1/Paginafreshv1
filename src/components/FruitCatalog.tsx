@@ -115,7 +115,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
                 <div className="relative aspect-[16/10] overflow-hidden bg-stone-100">
                   <img
                     src={fruit.imageUrl}
-                    alt={fruit.name}
+                    alt={fruit.imageAlt || `${fruit.name} (${fruit.presentation}) - Arándanos frescos de alta montaña cultivados con agricultura responsable y limpia`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
@@ -252,7 +252,7 @@ export const FruitCatalog: React.FC<FruitCatalogProps> = ({
             <div className="relative aspect-[16/8] bg-stone-900">
               <img
                 src={activeModalFruit.imageUrl}
-                alt={activeModalFruit.name}
+                alt={activeModalFruit.imageAlt || `Ficha agronómica de ${activeModalFruit.name} (${activeModalFruit.presentation}) - Arándanos de alta montaña y agricultura responsable`}
                 className="w-full h-full object-cover opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent" />

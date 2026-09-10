@@ -50,7 +50,7 @@ export const TestimonialsAndFaq: React.FC = () => {
                 <div className="pt-4 mt-4 border-t border-stone-200/70 flex items-center gap-3">
                   <img
                     src={t.avatar}
-                    alt={t.name}
+                    alt={t.imageAlt || `Cliente de arándanos de alta montaña Fresh Pick: ${t.name}, en ${t.city}`}
                     className="w-10 h-10 rounded-full object-cover border border-blue-300"
                   />
                   <div>

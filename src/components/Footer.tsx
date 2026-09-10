@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               <div className="h-12 w-12 rounded-xl bg-white p-1 border border-stone-800 shadow-sm flex items-center justify-center shrink-0 overflow-hidden">
                 <img
                   src="/logo.jpg"
-                  alt="Fresh Pick Logo"
+                  alt="Fresh Pick - Logo de arándanos de alta montaña y agricultura limpia"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />

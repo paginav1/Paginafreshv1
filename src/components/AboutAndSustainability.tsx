@@ -15,7 +15,7 @@ export const AboutAndSustainability: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] bg-stone-100 border-4 border-stone-50">
               <img
                 src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80"
-                alt="Finca de arándanos de alta montaña en Colombia"
+                alt="Cultivo de arándanos de alta montaña a 2.480 msnm con agricultura responsable, polinización natural y buenas prácticas agrícolas en Colombia"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />

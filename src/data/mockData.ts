@@ -14,6 +14,7 @@ export const FRUITS_DATA: FruitItem[] = [
     standardPrice: 7000,
     presentation: 'Clamshell ventilado 250g',
     imageUrl: 'https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Arándanos frescos variedad Biloxi y Emerald en clamshell de 250g, cosechados a 2.480 msnm con pruina natural intacta y agricultura responsable',
     brix: '14.5° - 16° Brix',
     altitude: '2.480 m.s.n.m.',
     benefits: ['Rico en antocianinas', 'Mejora la memoria y concentración', 'Bajo índice glucémico', '100% libre de ceras artificiales'],
@@ -34,6 +35,7 @@ export const FRUITS_DATA: FruitItem[] = [
     standardPrice: 15000,
     presentation: 'Eco-estuche rígido 500g',
     imageUrl: 'https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Arándanos Jumbo Selección Especial de más de 18mm de diámetro, cosechados a mano en cultivo andino de alta montaña con buenas prácticas agrícolas',
     brix: '15.5° - 17° Brix',
     altitude: '2.520 m.s.n.m.',
     benefits: ['Calibre extra superior >18mm', 'Mayor textura y firmeza', 'Selección manual de máxima categoría'],
@@ -54,6 +56,7 @@ export const FRUITS_DATA: FruitItem[] = [
     standardPrice: 25000,
     presentation: 'Caja Kraft respirable 1.000g',
     imageUrl: 'https://images.unsplash.com/photo-1563746098251-d35aef196e83?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Caja familiar de 1kg de arándanos frescos de alta montaña grado exportación, libres de ceras químicas y cosechados con agricultura limpia',
     brix: '14.5° - 16° Brix',
     altitude: '2.450 m.s.n.m.',
     benefits: ['Formato ahorro familiar', 'Cosechado en el amanecer del despacho', 'Ideal para consumo de toda la semana'],
@@ -74,6 +77,7 @@ export const FRUITS_DATA: FruitItem[] = [
     standardPrice: 11000,
     presentation: 'Bolsa hermética con cierre fácil 500g',
     imageUrl: 'https://images.unsplash.com/photo-1587132137056-bfbf0166836e?auto=format&fit=crop&w=800&q=80',
+    imageAlt: 'Arándanos ultracongelados IQF grado A en bolsa resellable de 500g, granos sueltos enteros de alta montaña y agricultura limpia para repostería y batidos',
     brix: '14° - 15° Brix',
     altitude: '2.480 m.s.n.m.',
     benefits: ['Ultracongelados sin perder nutrientes', 'Granos 100% sueltos sin apelmazar', 'Durabilidad de hasta 12 meses en congelador'],
@@ -126,7 +130,8 @@ export const ADDONS_DATA: AddOnItem[] = [
     description: 'Miel 100% pura y sin pasteurizar cosechada en los apiarios de polinización de la finca.',
     price: 18000,
     unit: 'Frasco de vidrio 300g',
-    imageUrl: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=400&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=400&q=80',
+    imageAlt: 'Frasco de miel cruda pura de abejas polinizadoras de cultivos de arándanos de alta montaña con agricultura responsable'
   },
   {
     id: 'granola-artesanal',
@@ -134,7 +139,8 @@ export const ADDONS_DATA: AddOnItem[] = [
     description: 'Avena integral tostada con almendras, semillas de calabaza, canela y chips de coco.',
     price: 15000,
     unit: 'Bolsa kraft resellable 350g',
-    imageUrl: 'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=400&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1517673132405-a56a62b18caf?auto=format&fit=crop&w=400&q=80',
+    imageAlt: 'Bolsa de granola andina artesanal horneada con avena integral, frutos secos y semillas para acompañar arándanos frescos'
   },
   {
     id: 'mermelada-arandanos',
@@ -142,7 +148,8 @@ export const ADDONS_DATA: AddOnItem[] = [
     description: 'Preparada únicamente con nuestros arándanos de alta montaña, zumo de limón y pectina natural.',
     price: 16500,
     unit: 'Tarro gourmet 230g',
-    imageUrl: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=80'
+    imageUrl: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=400&q=80',
+    imageAlt: 'Tarro de mermelada artesanal 0% azúcar añadida elaborada con arándanos frescos de alta montaña y agricultura limpia'
   }
 ];
 
@@ -234,6 +241,7 @@ export const RECIPES_DATA: RecipeItem[] = [
     prepTime: '10 min',
     difficulty: 'Fácil',
     image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80',
+    imageAlt: 'Bowl antioxidante preparado con arándanos frescos de alta montaña, granola andina artesanal y miel pura de finca con agricultura limpia',
     description: 'Un desayuno revitalizante rico en polifenoles que te mantendrá con energía durante todo el día.',
     ingredients: [
       '150g de Arándanos Fresh Pick congelados',
@@ -254,6 +262,7 @@ export const RECIPES_DATA: RecipeItem[] = [
     prepTime: '35 min',
     difficulty: 'Intermedio',
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
+    imageAlt: 'Galette rústica dorada horneada con arándanos enteros de alta montaña recién cosechados con agricultura responsable',
     description: 'Una galette rústica dorada que resalta los jugos naturales y el brillo de nuestros arándanos recién recolectados.',
     ingredients: [
       '350g de Arándanos Frescos Fresh Pick',
@@ -274,6 +283,7 @@ export const RECIPES_DATA: RecipeItem[] = [
     prepTime: '5 min',
     difficulty: 'Muy fácil',
     image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
+    imageAlt: 'Limonada helada refrescante con arándanos frescos de alta montaña macerados y hojas de menta de cultivo limpio',
     description: 'Bebida de hidratación alcalina con arándanos frescos macerados, menta de huerta y hielo picado.',
     ingredients: [
       '1 taza de arándanos frescos Fresh Pick',
@@ -297,6 +307,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Chef Pastelera & Propietaria de Café Dulce Cacao',
     city: 'Bogotá, Colombia',
     avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80',
+    imageAlt: 'Carolina Velásquez, chef pastelera cliente de arándanos frescos de alta montaña Fresh Pick en Bogotá',
     rating: 5,
     comment: 'Trabajar con Fresh Pick cambió el estándar de nuestras tartaletas. El calibre de los arándanos es gigante y nunca vienen húmedos ni golpeados. El pedido personalizado nos permite pedir la fruta en su punto exacto.',
     verifiedOrder: 'Pedido Personalizado recurrente (4 kg/semana)'
@@ -307,6 +318,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Médico Deportólogo y Maratonista',
     city: 'Medellín, Colombia',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+    imageAlt: 'Dr. Santiago Restrepo, médico deportólogo que consume arándanos de alta montaña cultivados con agricultura responsable',
     rating: 5,
     comment: 'Compro la Caja Familiar de Arándanos semanalmente. Se nota la diferencia de la altitud: son mucho más dulces y la cáscara cruje al morder. Mis hijos ahora comen arándanos frescos en vez de golosinas procesadas.',
     verifiedOrder: 'Suscripción Plan Familiar Vitalidad'
@@ -317,6 +329,7 @@ export const TESTIMONIALS_DATA: TestimonialItem[] = [
     role: 'Nutricionista Clínica',
     city: 'Chía, Cundinamarca',
     avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80',
+    imageAlt: 'Mariana Duarte, nutricionista clínica que recomienda arándanos frescos de alta montaña y agricultura limpia',
     rating: 5,
     comment: 'Poder enviar canastas personalizadas de regalo con mensaje dedicado a mis pacientes y familiares es genial. La presentación con cartón kraft y lazo de fique es hermosa y 100% responsable con el medio ambiente.',
     verifiedOrder: 'Canasta Artesanal Personalizada con Regalo'

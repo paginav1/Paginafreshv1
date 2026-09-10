@@ -431,7 +431,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                           <div className="flex items-center gap-3">
                             <img
                               src={fruit.imageUrl}
-                              alt={fruit.name}
+                              alt={fruit.imageAlt || `${fruit.name} - Arándanos frescos de alta montaña cultivados con agricultura responsable`}
                               className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0 border border-stone-200"
                             />
                             <div>
@@ -599,7 +599,7 @@ export const CustomOrderSection: React.FC<CustomOrderSectionProps> = ({
                         <div className="aspect-[4/3] rounded-lg overflow-hidden mb-2 bg-stone-100">
                           <img
                             src={addon.imageUrl}
-                            alt={addon.name}
+                            alt={addon.imageAlt || `${addon.name} para pedido de arándanos de alta montaña y agricultura limpia`}
                             className="w-full h-full object-cover"
                           />
                         </div>

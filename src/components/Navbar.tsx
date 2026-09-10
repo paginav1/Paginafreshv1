@@ -84,7 +84,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-xl bg-white p-1 border border-stone-200/90 shadow-xs flex items-center justify-center group-hover:scale-105 transition-transform shrink-0 overflow-hidden">
               <img
                 src="/logo.jpg"
-                alt="Logo Fresh Pick"
+                alt="Fresh Pick - Logotipo de arándanos frescos de alta montaña y agricultura responsable"
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
               />

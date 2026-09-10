@@ -98,7 +98,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               >
                 <img
                   src={item.fruit.imageUrl}
-                  alt={item.fruit.name}
+                  alt={item.fruit.imageAlt || `${item.fruit.name} (${item.fruit.presentation}) - Arándanos frescos de alta montaña cultivados con agricultura responsable`}
                   className="w-14 h-14 rounded-lg object-cover border border-stone-200 shrink-0"
                 />
 
