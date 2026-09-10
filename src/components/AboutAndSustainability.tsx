@@ -76,10 +76,10 @@ export const AboutAndSustainability: React.FC = () => {
               <div className="p-4 rounded-xl bg-stone-50 border border-stone-200/80">
                 <div className="flex items-center gap-2 text-blue-800 font-bold text-xs uppercase mb-1">
                   <Users className="w-4 h-4 text-blue-600" />
-                  <span>Cosecha 100% Manual</span>
+                  <span>Cosecha Manual & GRASP</span>
                 </div>
                 <p className="text-xs text-stone-600">
-                  Mujeres y familias campesinas de la región seleccionan fruto por fruto, asegurando trato digno e impacto social positivo.
+                  Mujeres y familias campesinas cosechan cada fruto bajo estándares certificados GRASP de trato digno, seguridad y bienestar social.
                 </p>
               </div>
             </div>

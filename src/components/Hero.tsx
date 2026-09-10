@@ -62,8 +62,8 @@ export const Hero: React.FC<HeroProps> = ({ onGoToCustomOrder, onExploreFruits }
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-stone-900">BPA & Global GAP</div>
-                  <div className="text-[11px] text-stone-500">Inocuidad certificada</div>
+                  <div className="text-xs font-bold text-stone-900">GLOBALG.A.P. & GRASP</div>
+                  <div className="text-[11px] text-stone-500">Inocuidad & bienestar social</div>
                 </div>
               </div>
 

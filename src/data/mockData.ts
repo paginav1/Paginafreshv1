@@ -242,27 +242,27 @@ export const SUBSCRIPTION_PLANS: SubscriptionPlan[] = [
 export const CERTIFICATIONS_LIST = [
   {
     id: 'global-gap',
-    title: 'Global G.A.P. Certified',
+    title: 'GLOBALG.A.P. Certified',
     code: 'GGN: 4063061238910',
-    description: 'Buenas prácticas agrícolas internacionales que garantizan inocuidad alimentaria, bienestar laboral y cuidado ambiental.'
+    description: 'Estándar internacional de referencia que certifica inocuidad alimentaria rigurosa, trazabilidad completa de cosecha y sostenibilidad ambiental.'
+  },
+  {
+    id: 'grasp',
+    title: 'Evaluación Social GRASP',
+    code: 'GLOBALG.A.P. Risk Assessment on Social Practice',
+    description: 'Módulo auditado de responsabilidad social que garantiza el bienestar, salud, seguridad y derechos laborales justos de nuestros trabajadores agrícolas.'
   },
   {
     id: 'bpa-ica',
     title: 'BPA ICA Colombia',
     code: 'Certificado Sanitario ICA N° 25-04-0018',
-    description: 'Acreditación oficial del Instituto Colombiano Agropecuario de producción limpia y libre de metales pesados.'
+    description: 'Acreditación oficial del Instituto Colombiano Agropecuario de producción limpia, inocua y libre de contaminantes.'
   },
   {
-    id: 'polinizacion-viva',
-    title: 'Polinización 100% Natural',
-    code: 'Apis Mellifera & Meliponas Nativas',
-    description: 'Nuestros cultivos albergan más de 40 colmenas activas que garantizan polinización uniforme y frutos más firmes.'
-  },
-  {
-    id: 'biofabrica',
-    title: 'Biofábrica Circular Propia',
-    code: 'Economía Circular Cero Desperdicio',
-    description: 'Transformamos el 100% de los restos de poda y follaje en abonos orgánicos y biopreparados vivos desde 2022.'
+    id: 'polinizacion-biofabrica',
+    title: 'Polinización & Biofábrica',
+    code: 'Economía Circular & 40+ Colmenas',
+    description: 'Polinización natural activa con abejas nativas y biofábrica propia que convierte 100% de las podas en abonos orgánicos vivos.'
   }
 ];
 
@@ -397,7 +397,7 @@ export const FAQ_DATA: FaqItem[] = [
   {
     id: 'faq-6',
     category: 'calidad',
-    question: '¿Qué certificados respaldan la inocuidad de sus frutas?',
-    answer: 'Contamos con la certificación internacional Global G.A.P. y el certificado de Buenas Prácticas Agrícolas (BPA) otorgado por el ICA. Además, operamos una biofábrica propia donde reutilizamos los residuos vegetales para nutrir el suelo de manera regenerativa.'
+    question: '¿Qué certificados respaldan la inocuidad y responsabilidad de sus frutas?',
+    answer: 'Contamos con la certificación internacional GLOBALG.A.P. (norma mundial para buenas prácticas e inocuidad agrícola) y la acreditación social GRASP (GLOBALG.A.P. Risk Assessment on Social Practice), que certifica el bienestar, salud y condiciones laborales dignas de nuestros recolectadores y trabajadores. También contamos con registro BPA otorgado por el ICA.'
   }
 ];

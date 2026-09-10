@@ -74,22 +74,27 @@ export const Navbar: React.FC<NavbarProps> = ({
             : 'bg-white border-b border-stone-100 py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2.5 text-left group"
+            className="flex items-center gap-3 text-left group shrink-0"
             id="nav-logo-btn"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-white shadow-md shadow-blue-800/20 group-hover:scale-105 transition-transform">
-              <Leaf className="w-6 h-6 text-blue-100" />
+            <div className="h-11 w-11 sm:h-12 sm:w-12 rounded-xl bg-white p-1 border border-stone-200/90 shadow-xs flex items-center justify-center group-hover:scale-105 transition-transform shrink-0 overflow-hidden">
+              <img
+                src="/logo.jpg"
+                alt="Logo Fresh Pick"
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-xl sm:text-2xl font-black tracking-tight text-blue-950 font-display">
+                <span className="text-xl sm:text-2xl font-black tracking-tight text-[#1e1634] font-display">
                   Fresh Pick
                 </span>
-                <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-100 text-blue-800">
+                <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-100 text-purple-900 border border-purple-200/60">
                   Frutas
                 </span>
               </div>
@@ -99,8 +104,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </button>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-stone-700">
+          {/* Desktop Navigation Links (Visible on xl+ screens where there is generous space) */}
+          <nav className="hidden xl:flex items-center gap-6 2xl:gap-7 text-sm font-medium text-stone-700 shrink-0">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="hover:text-blue-700 transition-colors cursor-pointer"
@@ -114,14 +119,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               Nuestras Frutas
             </button>
             <button
-              onClick={() => scrollToSection('pedidos-personalizados')}
-              className="flex items-center gap-1.5 text-blue-800 font-bold bg-blue-50 px-3 py-1.5 rounded-full border border-blue-200 hover:bg-blue-100 transition-all cursor-pointer"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-spin-slow" />
-              <span>Pedidos Personalizados</span>
-              <span className="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full uppercase">Nuevo</span>
-            </button>
-            <button
               onClick={() => scrollToSection('planes-mensuales')}
               className="hover:text-blue-700 transition-colors cursor-pointer"
             >
@@ -131,13 +128,13 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => scrollToSection('sostenibilidad')}
               className="hover:text-blue-700 transition-colors cursor-pointer"
             >
-              Sostenibilidad & Finca
+              Sostenibilidad
             </button>
             <button
               onClick={() => scrollToSection('recetas-tips')}
               className="hover:text-blue-700 transition-colors cursor-pointer"
             >
-              Recetas & Tips
+              Recetas
             </button>
             <button
               onClick={() => scrollToSection('faq')}
@@ -148,13 +145,14 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
 
           {/* Action CTAs & Cart */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             {/* Custom Order CTA Button */}
             <button
               id="header-cta-custom-order"
               onClick={onNavigateToCustomOrder}
-              className="hidden sm:flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 active:scale-95 transition-all px-4 py-2.5 rounded-lg shadow-sm hover:shadow-blue-700/20"
+              className="hidden sm:flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 active:scale-95 transition-all px-4 py-2.5 rounded-xl shadow-xs cursor-pointer whitespace-nowrap"
             >
+              <Sparkles className="w-3.5 h-3.5 text-blue-200" />
               <span>Armar Pedido</span>
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -174,11 +172,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
             </button>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile / Tablet Menu Button (Visible on screens smaller than xl) */}
             <button
               id="mobile-menu-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-100"
+              className="xl:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-100"
               aria-label="Abrir menú de navegación"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -186,9 +184,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile / Tablet Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-stone-200 bg-white px-4 pt-3 pb-6 space-y-3 mt-3 animate-in fade-in slide-in-from-top-4 duration-200 shadow-xl">
+          <div className="xl:hidden border-t border-stone-200 bg-white px-4 pt-3 pb-6 space-y-3 mt-3 animate-in fade-in slide-in-from-top-4 duration-200 shadow-xl">
             <button
               onClick={() => { setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="block w-full text-left py-2.5 px-3 rounded-lg text-stone-800 font-medium hover:bg-blue-50 hover:text-blue-800"

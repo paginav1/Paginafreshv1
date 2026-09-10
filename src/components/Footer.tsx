@@ -11,16 +11,21 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white">
-                <Leaf className="w-6 h-6 text-blue-100" />
+            <div className="flex items-center gap-3">
+              <div className="h-12 w-12 rounded-xl bg-white p-1 border border-stone-800 shadow-sm flex items-center justify-center shrink-0 overflow-hidden">
+                <img
+                  src="/logo.jpg"
+                  alt="Fresh Pick Logo"
+                  className="w-full h-full object-contain"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-2xl font-black tracking-tight text-white font-display">
                     Fresh Pick
                   </span>
-                  <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-blue-900 text-blue-300">
+                  <span className="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-950/80 text-purple-200 border border-purple-800/60">
                     Frutas
                   </span>
                 </div>
@@ -169,7 +174,7 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-stone-900 border border-stone-800 text-[11px] text-blue-300">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Certificación BPA ICA & Global G.A.P.</span>
+                <span>Certificados por GLOBALG.A.P. & GRASP</span>
               </div>
             </div>
           </div>

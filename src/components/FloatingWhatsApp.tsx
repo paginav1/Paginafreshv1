@@ -1,9 +1,22 @@
 import React from 'react';
-import { Phone, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export const FloatingWhatsApp: React.FC = () => {
   return (
-    <aside aria-label="Contacto directo por WhatsApp" className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2 group">
+    <motion.aside
+      aria-label="Contacto directo por WhatsApp"
+      className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2 group"
+      initial={{ opacity: 0, scale: 0.5, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{
+        delay: 2,
+        duration: 0.7,
+        type: 'spring',
+        stiffness: 260,
+        damping: 15,
+      }}
+    >
       <div className="hidden sm:block bg-stone-900 text-white text-xs py-1.5 px-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
         ¿Dudas con tu pedido? ¡Escríbenos!
       </div>
@@ -17,6 +30,6 @@ export const FloatingWhatsApp: React.FC = () => {
       >
         <MessageCircle className="w-7 h-7 fill-white/20" />
       </a>
-    </aside>
+    </motion.aside>
   );
 };
