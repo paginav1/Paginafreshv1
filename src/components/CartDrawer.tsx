@@ -40,7 +40,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       `*TOTAL:* $${total.toLocaleString('es-CO')} COP%0A%0A` +
       `Hola! Deseo confirmar este pedido de arándanos frescos para despacho a domicilio.`;
     
-    window.open(`https://wa.me/573216920138?text=${msg}`, '_blank');
+    window.open(`https://wa.me/573178931026?text=${msg}`, '_blank');
   };
 
   return (
